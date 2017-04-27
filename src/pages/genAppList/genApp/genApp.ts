@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { AppItem } from "./../../models/AppItem";
-import { TransportList } from './../../models/TransportList';
+import { AppItem } from "./../../../models/AppItem";
+import { TransportList } from './../../../models/TransportList';
 
 @Component({
-  selector: 'genAppList',
-  templateUrl: 'genAppList.html'
+  selector: 'genApp',
+  templateUrl: 'genApp.html'
 })
-export class GenAppList {
+export class GenApp {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
   appItemList: AppItem[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, transportList: TransportList) {
+
+    console.log('list: '+JSON.stringify(transportList.list));
 
     this.appItemList = transportList.list;
     // If we navigated to this page, we will have an item available as a nav param

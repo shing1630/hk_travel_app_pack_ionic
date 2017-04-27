@@ -30,7 +30,7 @@ const cloudSettings: CloudSettings = {
     GenAppList
   ],
   imports: [
-    IonicModule.forRoot(MyApp), 
+    IonicModule.forRoot(MyApp),
     BrowserModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,

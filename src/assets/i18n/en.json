@@ -3,6 +3,8 @@
     "HONG_KONG_TRAVEL_APP_PACK": "Hong Kong Travel App Pack"
   },
   "MENU": {
+    "CHECK_UPDATE": "Check Update",
+    "UPDATE_NOW": "Update Now",
     "HOME": "Home",
     "TRANSPORT": "Transport",
     "DINING": "Dining",

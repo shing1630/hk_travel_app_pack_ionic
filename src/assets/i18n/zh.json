@@ -3,6 +3,8 @@
     "HONG_KONG_TRAVEL_APP_PACK": "香港旅遊流動應用程式合集"
   },
   "MENU": {
+    "CHECK_UPDATE": "Check Update",
+    "UPDATE_NOW": "Update Now",
     "HOME": "首頁",
     "TRANSPORT": "交通",
     "DINING": "飲食",

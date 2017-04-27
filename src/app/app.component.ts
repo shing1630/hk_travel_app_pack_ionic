@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
 import { Network } from '@ionic-native/network';
 import { AlertController } from 'ionic-angular';
+import { Deploy } from "@ionic/cloud-angular";
 
 import { OT_GV, IGV } from './../globalVar/gv';
 import { GF } from './../globalFunc/gf';
@@ -21,8 +22,11 @@ export class MyApp {
   // make home the root (or first) page
   rootPage: any = HomePage;
 
+  public updateFlag: boolean;
+
   constructor(
     @Inject(OT_GV) public IGV: IGV,
+    public deploy: Deploy,
     public alertCtrl: AlertController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
@@ -37,12 +41,17 @@ export class MyApp {
   }
 
   initializeApp(translate) {
+    this.updateFlag = false;
     this.globalFunc.loadingPresent();
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      // default language to en
+      this.translate.use('en');
+      this.IGV.gLangInd = 'en';
 
       // For local storage
       this.storage.ready().then(() => {
@@ -61,8 +70,15 @@ export class MyApp {
             this.globalFunc.showToastNoNetwork();
           });
 
-          //this.globalFunc.checkForUpdate();
+          this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
+
+          this.deploy.check().then((snapshotAvailable: boolean) => {
+            this.updateFlag = snapshotAvailable;
+            this.globalFunc.loadingDismiss();
+          });
+
           this.globalFunc.loadingDismiss();
+
         });
 
       }, (error) => {
@@ -97,6 +113,33 @@ export class MyApp {
     }
     this.nav.setRoot(toPage);
   }
+
+  // -------------  Ionic deploy -------------//
+  updateApp() {
+    this.globalFunc.loadingPresent();
+    this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
+
+    this.deploy.check().then((snapshotAvailable: boolean) => {
+      if (snapshotAvailable) {
+        this.downloadAndInstall();
+      }
+      else {
+        this.globalFunc.loadingDismiss();
+        this.globalFunc.showNoUpdate();
+      }
+    });
+  }
+
+  downloadAndInstall() {
+    this.globalFunc.showToastDownloading();
+    this.deploy.download().then(() => {
+      this.deploy.extract();
+    }).then(() => {
+      this.deploy.load();
+      this.globalFunc.loadingDismiss();
+    });
+  }
+
 
   changeLangInd(lang) {
     this.translate.use(lang);

@@ -1,14 +1,14 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title class="centerAndMiddle">
-        <img style="height: 45px; width: 50px;" src="assets/img/logo/xxx">
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <ion-content class="applyBasicBgColor">
     <ion-list class="applyBasicBgColor colorToWhite">
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="updateApp()">
+          <div *ngIf="!updateFlag"><ion-icon name="settings" item-left> {{ 'MENU.CHECK_UPDATE' | translate }}</ion-icon></div>
+          <div *ngIf="updateFlag" >
+            <ion-icon name="download" class="colorToRed" item-left></ion-icon> 
+             {{ 'MENU.UPDATE_NOW' | translate }} 
+          </div>
+      </button>
       <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Home')">
           <ion-icon name="pin" item-left></ion-icon> {{ 'MENU.HOME' | translate }}
       </button>

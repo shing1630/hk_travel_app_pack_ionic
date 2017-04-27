@@ -1,7 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { AlertController, LoadingController, ToastController } from 'ionic-angular';
 import { AdMob, AdMobOptions } from '@ionic-native/admob';
-import { Deploy } from "@ionic/cloud-angular";
 import { OT_GV, IGV } from './../globalVar/gv';
 
 @Injectable()
@@ -11,53 +10,10 @@ export class GF {
 
     constructor(
         @Inject(OT_GV) private IGV: IGV,
-        public deploy: Deploy,
         public alertCtrl: AlertController,
         public loadingCtrl: LoadingController,
         public adMob: AdMob,
         private toastCtrl: ToastController) { }
-
-    // -------------  Ionic deploy -------------//
-    checkForUpdate() {
-        this.loadingPresent();
-        this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
-
-        this.deploy.check().then((snapshotAvailable: boolean) => {
-            if (snapshotAvailable) {
-                this.downloadAndInstall();
-            }
-            else {
-                this.loadingDismiss();
-                this.showNoUpdate();
-            }
-        });
-    }
-
-    downloadAndInstall() {
-        this.deploy.download().then(() =>
-            this.deploy.extract()).then(() => {
-                let inputTitle: string;
-                let btnLabel: string;
-                if (this.IGV.gLangInd === 'zh') {
-                    inputTitle = this.IGV.NO_NETWORK_CONNECTION_ZH;
-                    btnLabel = this.IGV.RELOAD_ZH;
-                } if (this.IGV.gLangInd === 'cn') {
-                    inputTitle = this.IGV.NO_NETWORK_CONNECTION_CN;
-                    btnLabel = this.IGV.RELOAD_CN;
-                } else {
-                    inputTitle = this.IGV.NO_NETWORK_CONNECTION_EN;
-                    btnLabel = this.IGV.RELOAD_EN;
-                }
-
-                let alert = this.alertCtrl.create({
-                    title: inputTitle,
-                    buttons: [btnLabel]
-                });
-                alert.present();
-                this.deploy.load();
-                this.loadingDismiss();
-            });
-    }
 
     // -------------  Alert -------------//
     presentSysErr() {
@@ -188,6 +144,25 @@ export class GF {
         let toast = this.toastCtrl.create({
             message: msg,
             duration: 3000,
+            position: 'top'
+        });
+        toast.present();
+    }
+
+    showToastDownloading() {
+        let msg: string;
+
+        if (this.IGV.gLangInd === 'zh') {
+            msg = this.IGV.DOWNLOADING_TAKE_MIN_ZH;
+        } if (this.IGV.gLangInd === 'cn') {
+            msg = this.IGV.DOWNLOADING_TAKE_MIN_CN;
+        } else {
+            msg = this.IGV.DOWNLOADING_TAKE_MIN_EN;
+        }
+
+        let toast = this.toastCtrl.create({
+            message: msg,
+            duration: 10000,
             position: 'top'
         });
         toast.present();

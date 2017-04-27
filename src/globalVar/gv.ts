@@ -25,6 +25,9 @@ export interface IGV {
     UPDATE_AVAILABLE_EN: string;
     UPDATE_AVAILABLE_CN: string;
     UPDATE_AVAILABLE_ZH: string;
+    DOWNLOADING_TAKE_MIN_EN: string;
+    DOWNLOADING_TAKE_MIN_CN: string;
+    DOWNLOADING_TAKE_MIN_ZH: string;
     RELOAD_EN: string;
     RELOAD_CN: string;
     RELOAD_ZH: string;
@@ -64,6 +67,10 @@ export const IGV: IGV = {
     UPDATE_AVAILABLE_EN: 'Update available!',
     UPDATE_AVAILABLE_CN: '有更新！',
     UPDATE_AVAILABLE_ZH: '有更新！',
+
+    DOWNLOADING_TAKE_MIN_EN: 'Downloading... This will take a few minutes!',
+    DOWNLOADING_TAKE_MIN_CN: 'Downloading... This will take a few minutes!',
+    DOWNLOADING_TAKE_MIN_ZH: 'Downloading... This will take a few minutes!',
 
     RELOAD_EN: 'Reload',
     RELOAD_CN: '重载',
