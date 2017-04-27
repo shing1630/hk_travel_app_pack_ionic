@@ -2,7 +2,7 @@ import { Injectable} from '@angular/core';
 import { AppItem } from "./AppItem";
 
 @Injectable()
-export class TransportList {
+export class DiningList {
 
     public list: AppItem[] = [];
 
@@ -13,10 +13,10 @@ export class TransportList {
     init() {
         // MTR
         let mtr = new AppItem();
-        mtr.id = 'T001';
-        mtr.nameEN = 'MTR';
-        mtr.nameCN = '港铁 MTR';
-        mtr.nameZH = '港鐵 MTR';
+        mtr.id = 'D001';
+        mtr.nameEN = 'Openrice';
+        mtr.nameCN = 'Openrice';
+        mtr.nameZH = 'Openrice';
         mtr.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
         mtr.iosPic1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
         mtr.iosPic2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
@@ -34,8 +34,8 @@ export class TransportList {
         // Test
         let test = new AppItem();
         test.id = 'T002';
-        test.nameEN = 'Test';
-        test.nameCN = '铁 Test';
+        test.nameEN = '22222222222';
+        test.nameCN = '222222222222';
         test.nameZH = '鐵 Test';
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
         test.iosPic1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
@@ -53,42 +53,6 @@ export class TransportList {
 
         this.list.push(mtr);
 
-        this.list.push(test);
-
-        // Test
-        test = new AppItem();
-        test.nameEN = 'Test2';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234021_01984a199964cd97522c4d3c23e1a9f6.png';
-        this.list.push(test);
-
-        test = new AppItem();
-        test.nameEN = 'Test3';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234044_fc1afa35f9fb2143ac8cf6960093865b.png';
-        this.list.push(test);
-
-        test = new AppItem();
-        test.nameEN = 'Test4';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234058_1c351754871d815810c025c30f45eb8f.png';
-        this.list.push(test);
-
-        test = new AppItem();
-        test.nameEN = 'Test5';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234113_7a88555d9548f0cd46f18d3f48e89c93.png';
-        this.list.push(test);
-
-        test = new AppItem();
-        test.nameEN = 'Test6';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234130_e6cad4595f83c3b0012494ac4353a4a4.png';
-        this.list.push(test);
-
-        test = new AppItem();
-        test.nameEN = 'Test7';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234145_0073d275ef6c931e87b955e549d63591.png';
-        this.list.push(test);
-
-        test = new AppItem();
-        test.nameEN = 'Test8';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234208_8fe18434a8e7f3c5795d5b54ea038685.png';
         this.list.push(test);
 
         test = new AppItem();

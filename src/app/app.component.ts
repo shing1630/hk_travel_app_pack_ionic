@@ -70,12 +70,12 @@ export class MyApp {
             this.globalFunc.showToastNoNetwork();
           });
 
-          this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
+          // this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
 
-          this.deploy.check().then((snapshotAvailable: boolean) => {
-            this.updateFlag = snapshotAvailable;
-            this.globalFunc.loadingDismiss();
-          });
+          // this.deploy.check().then((snapshotAvailable: boolean) => {
+          //   this.updateFlag = snapshotAvailable;
+          //   this.globalFunc.loadingDismiss();
+          // });
 
           this.globalFunc.loadingDismiss();
 
@@ -92,7 +92,7 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  openPage(page, appItemInd) {
     // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
@@ -104,6 +104,7 @@ export class MyApp {
       }
       case 'GenAppList': {
         toPage = GenAppList;
+        this.IGV.gAppItemInd = appItemInd;
         break;
       }
       default: {

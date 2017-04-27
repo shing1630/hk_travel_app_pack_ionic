@@ -10,12 +10,16 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Network } from '@ionic-native/network';
 import { AdMob } from '@ionic-native/admob';
 import { GF } from './../globalFunc/gf';
-import { TransportList } from './../models/TransportList';
+
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
 import { HomePage } from '../pages/home/home';
 import { GenAppList } from '../pages/genAppList/genAppList';
+import { GenApp } from '../pages/genAppList/genApp/genApp';
+
+import { TransportList } from './../models/TransportList';
+import { DiningList } from './../models/DiningList';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -27,7 +31,8 @@ const cloudSettings: CloudSettings = {
   declarations: [
     MyApp,
     HomePage,
-    GenAppList
+    GenAppList,
+    GenApp
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -44,17 +49,19 @@ const cloudSettings: CloudSettings = {
   entryComponents: [
     MyApp,
     HomePage,
-    GenAppList
+    GenAppList,
+    GenApp
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: OT_GV, useValue: IGV },
     AdMob,
     GF,
-    TransportList,
     Network,
     StatusBar,
-    SplashScreen
+    SplashScreen,
+    TransportList,
+    DiningList
   ]
 })
 export class AppModule { }

@@ -8,6 +8,7 @@ export interface IGV {
     ADMOB_MAX_NUMBER: number;
     admobCount: number;
     gLangInd: string;
+    gAppItemInd: string;
 
     // Lange
     ERROR_EN: string;
@@ -47,6 +48,7 @@ export const IGV: IGV = {
     admobCount: 5,
 
     gLangInd: '',
+    gAppItemInd: '',
 
     // Lang
     ERROR_EN: 'ERROR!',

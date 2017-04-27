@@ -3,20 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>genAppList</ion-title>
+    <ion-title>{{selectedAppItem.nameEN}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let appItem of appItemList" (click)="itemTapped($event, item)">
-      <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>
-      <div class="item-note" item-right>
-        {{appItem.nameEN}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+
+  <div>
+    You navigated here from <b>{{selectedAppItem.descEN}}</b>
   </div>
 </ion-content>

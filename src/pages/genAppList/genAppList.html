@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let appItem of appItemList" (click)="itemTapped($event, item)">
+    <button ion-item *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)">
       <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>
       <div class="item-note" item-right>
         {{appItem.nameEN}}
