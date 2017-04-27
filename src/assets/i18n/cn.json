@@ -1,0 +1,47 @@
+{
+  "MAIN": {
+    "HONG_KONG_TRAVEL_APP_PACK": "香港旅游流动应用程式合集"
+  },
+  "MENU": {
+    "HOME": "首页",
+    "TRANSPORT": "交通",
+    "DINING": "饮食",
+    "WEATHER": "天气",
+    "ACCOMMODATION": "住宿",
+    "SHOPPING": "购物",
+    "ENTERTAINMENT": "娱乐",
+    "EMERGENCY": "紧急",
+    "LANGUAGE": "语言",
+    "EN": "ENG",
+    "CN": "简",
+    "ZH": "繁"
+  },  
+  "TRANSPORT": {
+    "P1": "",
+    "P2": ""
+  },
+  "DINING": {
+    "P1": "",
+    "P2": ""
+  },
+  "WEATHER": {
+    "P1": "",
+    "P2": ""
+  },
+  "ACCOMMODATION": {
+    "P1": "",
+    "P2": ""
+  },
+  "SHOPPING": {
+    "P1": "",
+    "P2": ""
+  },
+  "ENTERTAINMENT": {
+    "P1": "",
+    "P2": ""
+  },
+  "EMERGENCY": {
+    "P1": "",
+    "P2": ""
+  }
+}

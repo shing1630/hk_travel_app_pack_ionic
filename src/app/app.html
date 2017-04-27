@@ -1,0 +1,55 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="centerAndMiddle">
+        <img style="height: 45px; width: 50px;" src="assets/img/logo/xxx">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="applyBasicBgColor">
+    <ion-list class="applyBasicBgColor colorToWhite">
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Home')">
+          <ion-icon name="pin" item-left></ion-icon> {{ 'MENU.HOME' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList')">
+          <ion-icon name="subway" item-left></ion-icon> {{ 'MENU.TRANSPORT' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Dining')">
+          <ion-icon name="restaurant" item-left></ion-icon> {{ 'MENU.DINING' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Weather')">
+          <ion-icon name="partly-sunny" item-left></ion-icon> {{ 'MENU.WEATHER' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Accommodation')">
+          <ion-icon name="home" item-left></ion-icon> {{ 'MENU.ACCOMMODATION' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Shopping')">
+          <ion-icon name="cart" item-left></ion-icon> {{ 'MENU.SHOPPING' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Entertainment')">
+          <ion-icon name="film" item-left></ion-icon> {{ 'MENU.ENTERTAINMENT' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('Emergency')">
+          <ion-icon name="pulse" item-left></ion-icon> {{ 'MENU.EMERGENCY' | translate }}
+      </button>
+      <ion-item class="applyBasicBgColor colorToWhite">
+        <ion-icon name="globe" item-left></ion-icon>
+        <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
+      </ion-item>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('en')">
+        {{ 'MENU.EN' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('cn')">
+        {{ 'MENU.CN' | translate }}
+      </button>
+      <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('zh')">
+        {{ 'MENU.ZH' | translate }}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

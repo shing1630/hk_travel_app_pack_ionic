@@ -1,0 +1,51 @@
+{
+  "MAIN": {
+    "HONG_KONG_TRAVEL_APP_PACK": "Hong Kong Travel App Pack"
+  },
+  "MENU": {
+    "HOME": "Home",
+    "TRANSPORT": "Transport",
+    "DINING": "Dining",
+    "WEATHER": "Weather",
+    "ACCOMMODATION": "Accommodation",
+    "SHOPPING": "Shopping",
+    "ENTERTAINMENT": "Entertainment",
+    "EMERGENCY": "Emergency",
+    "LANGUAGE": "Language",
+    "EN": "ENG",
+    "CN": "简",
+    "ZH": "繁"
+  },  
+   "HOME": {
+    "WELCOME": "Welcome",
+    "P2": ""
+  },
+  "TRANSPORT": {
+    "P1": "",
+    "P2": ""
+  },
+  "DINING": {
+    "P1": "",
+    "P2": ""
+  },
+  "WEATHER": {
+    "P1": "",
+    "P2": ""
+  },
+  "ACCOMMODATION": {
+    "P1": "",
+    "P2": ""
+  },
+  "SHOPPING": {
+    "P1": "",
+    "P2": ""
+  },
+  "ENTERTAINMENT": {
+    "P1": "",
+    "P2": ""
+  },
+  "EMERGENCY": {
+    "P1": "",
+    "P2": ""
+  }
+}
