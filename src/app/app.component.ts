@@ -135,7 +135,28 @@ export class MyApp {
     this.deploy.download().then(() => {
       this.deploy.extract();
     }).then(() => {
-      this.deploy.load();
+      let inputTitle: string;
+      if (this.IGV.gLangInd === 'zh') {
+        inputTitle = this.IGV.RELOAD_ZH;
+      } if (this.IGV.gLangInd === 'cn') {
+        inputTitle = this.IGV.RELOAD_CN;
+      } else {
+        inputTitle = this.IGV.RELOAD_EN;
+      }
+
+      let alert = this.alertCtrl.create({
+        title: inputTitle,
+        message: '',
+        buttons: [
+          {
+            text: 'OK',
+            handler: () => {
+              this.deploy.load();
+            }
+          }
+        ]
+      });
+      alert.present();
       this.globalFunc.loadingDismiss();
     });
   }
