@@ -40,11 +40,13 @@ export class GenApp {
   }
 
   openAppStore() {
-    if (this.IGV.isIOS) {
-      this.globalFunc.openMarket(this.selectedAppItem.iosLink)
-    } else if (this.IGV.isAndroid) {
-      this.globalFunc.openMarket(this.selectedAppItem.androiLink)
-    }
+    // test
+    this.globalFunc.openMarket('com.hkrain0730')
+    // if (this.IGV.isIOS) {
+    //   this.globalFunc.openMarket(this.selectedAppItem.iosLink)
+    // } else if (this.IGV.isAndroid) {
+    //   this.globalFunc.openMarket(this.selectedAppItem.androiLink)
+    // }
   }
 
 

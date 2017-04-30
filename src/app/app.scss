@@ -36,9 +36,14 @@ $basicColor: #382E1C;
 	vertical-align: middle;
 }
 
+.marginRightTo0{
+  margin-right: 0px !important;
+}
+
 .homeBtn{
-  width:110px;
-  height:75px;
+  width:170px;
+  height:90px;
+  word-wrap: break-word;
 }
 
 .fontSizeTo18{

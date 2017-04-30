@@ -19,18 +19,18 @@
     <ion-item-sliding #item class="borderBottomTo1" *ngFor="let appItem of IGV.myAppItemList">
       <button ion-item (click)="itemTapped($event, appItem)">
         <div class="item-note centerAndMiddle" item-left>
-          <img width="75" height="75" src="{{appItem.logoPic}}">
+          <img style="width: 75px; height:75px" src="{{appItem.logoPic}}">
         </div>
-        <div *ngIf="IGV.gLangInd === 'en'" class="item-note" item-left>
+        <div *ngIf="IGV.gLangInd === 'en'" class="item-note marginRightTo0" item-left>
           {{appItem.nameEN}}
         </div>
-        <div *ngIf="IGV.gLangInd === 'cn'" class="item-note" item-left>
+        <div *ngIf="IGV.gLangInd === 'cn'" class="item-note marginRightTo0" item-left>
           {{appItem.nameCN}}
         </div>
-        <div *ngIf="IGV.gLangInd === 'zh'" class="item-note" item-left>
+        <div *ngIf="IGV.gLangInd === 'zh'" class="item-note marginRightTo0" item-left>
           {{appItem.nameZH}}
         </div>
-        <div class="item-note rightAndMiddle" item-left>
+        <div class="item-note rightAndMiddle marginRightTo0" item-left>
           <img *ngIf="appItem.goodFlag" width="25" height="25" src="assets/img/good.png">
           <img *ngIf="appItem.hotFlag" width="25" height="25" src="assets/img/hot.png">
           <img *ngIf="appItem.saveFlag" width="25" height="25" src="assets/img/star.png">
