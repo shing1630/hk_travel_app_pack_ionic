@@ -27,6 +27,8 @@ export class GF {
 
     isMyFavourite(appID: string) {
         let saveApp = this.IGV.myAppItemMap.get(appID);
+        console.log('appID: '+appID);
+        console.log('saveApp: '+saveApp);
         if(saveApp == null){
             return false;
         }else{

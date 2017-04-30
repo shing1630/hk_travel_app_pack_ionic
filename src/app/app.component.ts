@@ -46,6 +46,7 @@ export class MyApp {
     this.globalFunc.loadingPresent();
 
     this.IGV.myAppItemMap = new Map<string, AppItem>();
+
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -69,6 +70,16 @@ export class MyApp {
             this.IGV.gLangInd = val.langInd;
           } else {
             this.showLangChoose();
+          }
+        });
+
+        // Get myAppItemList
+        this.storage.get('myFavourite').then((val) => {
+          if (val !== null) {
+            this.IGV.myAppItemList = val.myappItemList as AppItem[];
+            for (let myAppItem of this.IGV.myAppItemList) {
+              this.IGV.myAppItemMap.set(myAppItem.id, myAppItem);
+            }
           }
           this.globalFunc.loadingDismiss();
         });

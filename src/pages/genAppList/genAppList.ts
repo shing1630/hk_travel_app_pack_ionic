@@ -27,25 +27,7 @@ export class GenAppList {
 
     switch (this.IGV.gAppItemInd) {
       case 'favourite': {
-        this.globalFunc.loadingPresent();
-        // For local storage
-        this.storage.ready().then(() => {
-
-          // Get mySetting
-          this.storage.get('myAppItemMap').then((val) => {
-            if (val !== null) {
-              this.IGV.myAppItemList = val.myappItemList as AppItem[];
-              for (let myAppItem of this.IGV.myAppItemList) {
-                this.IGV.myAppItemMap.set(myAppItem.id, myAppItem);
-              }
-            }
-            this.globalFunc.loadingDismiss();
-          });
-
-        }, (error) => {
-          this.globalFunc.presentSysErr();
-          this.globalFunc.loadingDismiss();
-        });
+        this.appItemList = this.IGV.myAppItemList;
         break;
       }
       case 'transport': {
@@ -111,7 +93,8 @@ export class GenAppList {
     let index: number = this.IGV.myAppItemList.indexOf(this.IGV.myAppItemMap.get(appItem.id));
     if (index !== -1) {
       this.IGV.myAppItemList.splice(index, 1);
-      delete this.IGV.myAppItemMap[appItem.id];
+      this.IGV.myAppItemMap.delete(appItem.id);
+      this.storage.set('myFavourite', { myappItemList: this.IGV.myAppItemList });
     }
   }
 }
