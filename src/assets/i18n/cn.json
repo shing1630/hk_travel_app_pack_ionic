@@ -18,32 +18,13 @@
     "CN": "简",
     "ZH": "繁"
   },  
-  "TRANSPORT": {
-    "P1": "",
-    "P2": ""
+   "HOME": {
+    "WELCOME": "Welcome",
+    "MY_FAVOURITE": "我的最爱"
   },
-  "DINING": {
-    "P1": "",
-    "P2": ""
-  },
-  "WEATHER": {
-    "P1": "",
-    "P2": ""
-  },
-  "ACCOMMODATION": {
-    "P1": "",
-    "P2": ""
-  },
-  "SHOPPING": {
-    "P1": "",
-    "P2": ""
-  },
-  "ENTERTAINMENT": {
-    "P1": "",
-    "P2": ""
-  },
-  "EMERGENCY": {
-    "P1": "",
-    "P2": ""
+  "GENAPP": {
+    "EDITOR_WORD": "编辑的话",
+    "DESC": "描述",
+    "FUN_FACT": "有趣事"
   }
 }

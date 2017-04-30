@@ -17,33 +17,14 @@
     "EN": "ENG",
     "CN": "简",
     "ZH": "繁"
+  },  
+   "HOME": {
+    "WELCOME": "Welcome",
+    "MY_FAVOURITE": "我的最愛"
   },
-  "TRANSPORT": {
-    "P1": "",
-    "P2": ""
-  },
-  "DINING": {
-    "P1": "",
-    "P2": ""
-  },
-  "WEATHER": {
-    "P1": "",
-    "P2": ""
-  },
-  "ACCOMMODATION": {
-    "P1": "",
-    "P2": ""
-  },
-  "SHOPPING": {
-    "P1": "",
-    "P2": ""
-  },
-  "ENTERTAINMENT": {
-    "P1": "",
-    "P2": ""
-  },
-  "EMERGENCY": {
-    "P1": "",
-    "P2": ""
+  "GENAPP": {
+    "EDITOR_WORD": "編輯的話",
+    "DESC": "描述",
+    "FUN_FACT": "有趣事"
   }
 }

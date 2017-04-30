@@ -20,34 +20,11 @@
   },  
    "HOME": {
     "WELCOME": "Welcome",
-    "P2": ""
+    "MY_FAVOURITE": "My Favourite"
   },
-  "TRANSPORT": {
-    "P1": "",
-    "P2": ""
-  },
-  "DINING": {
-    "P1": "",
-    "P2": ""
-  },
-  "WEATHER": {
-    "P1": "",
-    "P2": ""
-  },
-  "ACCOMMODATION": {
-    "P1": "",
-    "P2": ""
-  },
-  "SHOPPING": {
-    "P1": "",
-    "P2": ""
-  },
-  "ENTERTAINMENT": {
-    "P1": "",
-    "P2": ""
-  },
-  "EMERGENCY": {
-    "P1": "",
-    "P2": ""
+  "GENAPP": {
+    "EDITOR_WORD": "Editor's word",
+    "DESC": "Description",
+    "FUN_FACT": "Fun Fact"
   }
 }

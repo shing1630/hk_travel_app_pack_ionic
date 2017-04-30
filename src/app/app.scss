@@ -26,6 +26,28 @@ $basicColor: #382E1C;
 	vertical-align: middle;
 }
 
+.rightAndMiddle{
+	text-align: right;
+	vertical-align: middle;
+}
+
+.leftAndMiddle{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.fontSizeTo18{
+    font-size: 18px;
+}
+
+.fontSizeTo25{
+    font-size: 25px;
+}
+
+.colorToBasic{
+	color: #382E1C;
+}
+
 .colorToWhite{
 	color: white;
 }
@@ -34,12 +56,24 @@ $basicColor: #382E1C;
 	color: red;
 }
 
+.fontToBold{
+  font-weight: bold;
+}
+
 .item-block.item-md .label{
   color: white;
 }
 
-.list-md .item-block .item-inner {
+.list-md .item-block .item-inner, .list-ios .item-block .item-inner {
   border-bottom: 0;
+}
+
+.borderBottomTo1{
+  border-bottom: 1px solid #dedede;
+}
+
+ion-img {
+  background: transparent;
 }
 
 // Override loading
@@ -61,3 +95,4 @@ ion-refresher-content *{
   stroke: $basicColor !important;
   color: $basicColor !important;
 }
+
