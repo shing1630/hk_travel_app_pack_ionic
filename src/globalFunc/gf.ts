@@ -1,7 +1,8 @@
 import { Injectable, Inject } from '@angular/core';
-import { AlertController, LoadingController, ToastController } from 'ionic-angular';
+import { Platform, AlertController, LoadingController, ToastController } from 'ionic-angular';
 import { AdMob, AdMobOptions } from '@ionic-native/admob';
 import { OT_GV, IGV } from './../globalVar/gv';
+import { Market } from '@ionic-native/market';
 
 @Injectable()
 export class GF {
@@ -11,9 +12,27 @@ export class GF {
     constructor(
         @Inject(OT_GV) private IGV: IGV,
         public alertCtrl: AlertController,
+        public platform: Platform,
+        private market: Market,
         public loadingCtrl: LoadingController,
         public adMob: AdMob,
         private toastCtrl: ToastController) { }
+
+
+    // -------------  App Store -------------//
+    // Open app store / market
+    openMarket(appStoreID: string) {
+        this.market.open(appStoreID);
+    }
+
+    isMyFavourite(appID: string) {
+        let saveApp = this.IGV.myAppItemMap.get(appID);
+        if(saveApp == null){
+            return false;
+        }else{
+            return true;
+        }
+    }
 
     // -------------  Alert -------------//
     presentSysErr() {
@@ -70,10 +89,10 @@ export class GF {
     }
 
     public setAdMobIds() {
-        if (/(android)/i.test(navigator.userAgent)) {
+        if (this.IGV.isAndroid) {
             IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/7147483825';
             IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/8624217023';
-        } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+        } else if (this.IGV.isIOS) {
             IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/2577683427';
             IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/4054416623';
         } else {
@@ -83,8 +102,8 @@ export class GF {
     }
 
     public showBanner() {
-        if (!/(android)/i.test(navigator.userAgent)
-            && !/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+        if (!this.IGV.isAndroid
+            && !this.IGV.isIOS) {
             return false;
         }
 
@@ -103,9 +122,14 @@ export class GF {
         return true;
     }
 
+    public removeBanner() {
+        this.adMob.removeBanner();
+        return true;
+    }
+
     public showInterstitial() {
-        if (!/(android)/i.test(navigator.userAgent)
-            && !/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+        if (!this.IGV.isAndroid
+            && !this.IGV.isIOS) {
             return false;
         }
 

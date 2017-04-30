@@ -14,14 +14,17 @@ export class TransportList {
         // MTR
         let mtr = new AppItem();
         mtr.id = 'T001';
-        mtr.nameEN = 'MTR';
+        mtr.goodFlag = true;
+        mtr.hotFlag = true;
+        mtr.saveFlag = false;
+        mtr.nameEN = 'Tramways - Ding Ding';
         mtr.nameCN = '港铁 MTR';
         mtr.nameZH = '港鐵 MTR';
         mtr.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
-        mtr.iosPic1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        mtr.iosPic2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
-        mtr.androidPlc1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        mtr.androidPlc2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
+        mtr.iosPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
+        mtr.iosPicEN2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
+        mtr.androidPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
+        mtr.androidPicEN2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
         mtr.iosLink = 'https://itunes.apple.com/hk/app/mtr-mobile/id369295276';
         mtr.androiLink = 'https://play.google.com/store/apps/details?id=com.mtr.mtrmobile';
         mtr.editorWordEN = 'Good';
@@ -34,14 +37,13 @@ export class TransportList {
         // Test
         let test = new AppItem();
         test.id = 'T002';
+        test.saveFlag = false;
+        test.goodFlag = true;
+        test.hotFlag = true;
         test.nameEN = 'Test';
         test.nameCN = '铁 Test';
         test.nameZH = '鐵 Test';
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
-        test.iosPic1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        test.iosPic2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
-        test.androidPlc1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        test.androidPlc2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
         test.iosLink = 'https://itunes.apple.com/hk/app/mtr-mobile/id369295276';
         test.androiLink = 'https://play.google.com/store/apps/details?id=com.mtr.mtrmobile';
         test.descEN = 'Test';
@@ -57,42 +59,53 @@ export class TransportList {
 
         // Test
         test = new AppItem();
-        test.nameEN = 'Test2';
+        test.id = 'T003';
+        test.nameEN = 'Speak Cantonese Free（常用广东话）';
+        test.goodFlag = true;
+        test.hotFlag = true;
+        test.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234021_01984a199964cd97522c4d3c23e1a9f6.png';
         this.list.push(test);
 
         test = new AppItem();
-        test.nameEN = 'Test3';
+        test.id = 'T004';
+        test.nameEN = 'Test4';
+        mtr.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234044_fc1afa35f9fb2143ac8cf6960093865b.png';
         this.list.push(test);
 
         test = new AppItem();
-        test.nameEN = 'Test4';
-        test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234058_1c351754871d815810c025c30f45eb8f.png';
-        this.list.push(test);
-
-        test = new AppItem();
+        test.id = 'T005';
         test.nameEN = 'Test5';
+        mtr.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234113_7a88555d9548f0cd46f18d3f48e89c93.png';
         this.list.push(test);
 
         test = new AppItem();
+        test.id = 'T006';
         test.nameEN = 'Test6';
+        mtr.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234130_e6cad4595f83c3b0012494ac4353a4a4.png';
         this.list.push(test);
 
         test = new AppItem();
+        test.id = 'T007';
         test.nameEN = 'Test7';
+        mtr.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234145_0073d275ef6c931e87b955e549d63591.png';
         this.list.push(test);
 
         test = new AppItem();
+        test.id = 'T008';
         test.nameEN = 'Test8';
+        mtr.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234208_8fe18434a8e7f3c5795d5b54ea038685.png';
         this.list.push(test);
 
         test = new AppItem();
+        test.id = 'T009';
         test.nameEN = 'Test9';
+        mtr.saveFlag = false;
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/234220_56f669924b0d0414ff2e0daaf962af9f.png';
         this.list.push(test);
     }

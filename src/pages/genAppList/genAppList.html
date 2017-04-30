@@ -3,20 +3,67 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>genAppList</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'favourite'">{{ 'MENU.MY_FAVOURITE' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'transport'">{{ 'MENU.TRANSPORT' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'dining'">{{ 'MENU.DINING' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'weather'">{{ 'MENU.WEATHER' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'accommodation'">{{ 'MENU.ACCOMMODATION' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'shopping'">{{ 'MENU.SHOPPING' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'entertainment'">{{ 'MENU.ENTERTAINMENT' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'emergency'">{{ 'MENU.EMERGENCY' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)">
-      <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>
-      <div class="item-note" item-right>
-        {{appItem.nameEN}}
+  <ion-list *ngIf="IGV.gAppItemInd === 'favourite'">
+    <ion-item-sliding #item class="borderBottomTo1" *ngFor="let appItem of IGV.myAppItemList">
+      <button ion-item (click)="itemTapped($event, appItem)">
+        <div class="item-note centerAndMiddle" item-left>
+          <img width="75" height="75" src="{{appItem.logoPic}}">
+        </div>
+        <div *ngIf="IGV.gLangInd === 'en'" class="item-note" item-left>
+          {{appItem.nameEN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'cn'" class="item-note" item-left>
+          {{appItem.nameCN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'zh'" class="item-note" item-left>
+          {{appItem.nameZH}}
+        </div>
+        <div class="item-note rightAndMiddle" item-left>
+          <img *ngIf="appItem.goodFlag" width="25" height="25" src="assets/img/good.png">
+          <img *ngIf="appItem.hotFlag" width="25" height="25" src="assets/img/hot.png">
+          <img *ngIf="appItem.saveFlag" width="25" height="25" src="assets/img/star.png">
+        </div>
+      </button>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeFromMyFavourite(appItem)">
+          <ion-icon style="font-size: 45px;" name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'">
+    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)">
+      <div class="item-note centerAndMiddle" item-left>
+        <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>
+      </div>
+     
+      <div *ngIf="IGV.gLangInd === 'en'" class="item-note" item-left>
+        {{appItem.nameEN}} 
+      </div>
+      <div *ngIf="IGV.gLangInd === 'cn'" class="item-note" item-left>
+        {{appItem.nameCN}}
+      </div>
+      <div *ngIf="IGV.gLangInd === 'zh'" class="item-note" item-left>
+        {{appItem.nameZH}}
+      </div>
+
+      <div class="item-note rightAndMiddle" item-left>
+        <img *ngIf="appItem.goodFlag" width="25" height="25" src="assets/img/good.png">
+        <img *ngIf="appItem.hotFlag" width="25" height="25" src="assets/img/hot.png">
+        <img *ngIf="appItem.saveFlag" width="25" height="25" src="assets/img/star.png">
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>

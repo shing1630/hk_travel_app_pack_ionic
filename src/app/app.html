@@ -1,53 +1,55 @@
-<ion-menu [content]="content">
-
-  <ion-content class="applyBasicBgColor">
-    <ion-list class="applyBasicBgColor colorToWhite">
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="updateApp()">
-          <div *ngIf="!updateFlag"><ion-icon name="settings" item-left> {{ 'MENU.CHECK_UPDATE' | translate }}</ion-icon></div>
-          <div *ngIf="updateFlag" >
-            <ion-icon name="download" class="colorToRed" item-left></ion-icon> 
-             {{ 'MENU.UPDATE_NOW' | translate }} 
-          </div>
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('HomePage', 'homePage')">
-          <ion-icon name="pin" item-left></ion-icon> {{ 'MENU.HOME' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'transport')">
-          <ion-icon name="subway" item-left></ion-icon> {{ 'MENU.TRANSPORT' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'dining')">
-          <ion-icon name="restaurant" item-left></ion-icon> {{ 'MENU.DINING' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'weather')">
-          <ion-icon name="partly-sunny" item-left></ion-icon> {{ 'MENU.WEATHER' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'accommodation')">
-          <ion-icon name="home" item-left></ion-icon> {{ 'MENU.ACCOMMODATION' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'shopping')">
-          <ion-icon name="cart" item-left></ion-icon> {{ 'MENU.SHOPPING' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'entertainment')">
-          <ion-icon name="film" item-left></ion-icon> {{ 'MENU.ENTERTAINMENT' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'emergency')">
-          <ion-icon name="pulse" item-left></ion-icon> {{ 'MENU.EMERGENCY' | translate }}
-      </button>
-      <ion-item class="applyBasicBgColor colorToWhite">
-        <ion-icon name="globe" item-left></ion-icon>
-        <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
-      </ion-item>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('en')">
-        {{ 'MENU.EN' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('cn')">
-        {{ 'MENU.CN' | translate }}
-      </button>
-      <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('zh')">
-        {{ 'MENU.ZH' | translate }}
-      </button>
-    </ion-list>
-  </ion-content>
+<ion-menu [content]="content" (ionOpen)="menuOpened()" (ionClose)="menuClosed()">
+    <ion-content class="applyBasicBgColor">
+        <ion-list class="applyBasicBgColor colorToWhite">
+            <!--<button class="applyBasicBgColor colorToWhite" ion-item (click)="updateApp()">
+                <div *ngIf="!updateFlag"><ion-icon name="settings" item-left> {{ 'MENU.CHECK_UPDATE' | translate }}</ion-icon></div>
+                <div *ngIf="updateFlag" >
+                    <ion-icon name="download" class="colorToRed" item-left></ion-icon> 
+                    {{ 'MENU.UPDATE_NOW' | translate }} 
+                </div>
+            </button>-->
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('HomePage', 'homePage')">
+                <ion-icon name="pin" item-left></ion-icon> {{ 'MENU.HOME' | translate }}
+            </button>
+            <button id="menuFavourite" class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'favourite')">
+                <ion-icon name="heart" item-left></ion-icon> {{ 'MENU.MY_FAVOURITE' | translate }}
+            </button>
+            <button id="menuTransport" class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'transport')">
+                <ion-icon name="subway" item-left></ion-icon> {{ 'MENU.TRANSPORT' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'dining')">
+                <ion-icon name="restaurant" item-left></ion-icon> {{ 'MENU.DINING' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'weather')">
+                <ion-icon name="partly-sunny" item-left></ion-icon> {{ 'MENU.WEATHER' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'accommodation')">
+                <ion-icon name="home" item-left></ion-icon> {{ 'MENU.ACCOMMODATION' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'shopping')">
+                <ion-icon name="cart" item-left></ion-icon> {{ 'MENU.SHOPPING' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'entertainment')">
+                <ion-icon name="film" item-left></ion-icon> {{ 'MENU.ENTERTAINMENT' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'emergency')">
+                <ion-icon name="pulse" item-left></ion-icon> {{ 'MENU.EMERGENCY' | translate }}
+            </button>
+            <ion-item class="applyBasicBgColor colorToWhite">
+                <ion-icon name="globe" item-left></ion-icon>
+                <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
+            </ion-item>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('en')">
+                {{ 'MENU.EN' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('cn')">
+                {{ 'MENU.CN' | translate }}
+            </button>
+            <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('zh')">
+                {{ 'MENU.ZH' | translate }}
+            </button>
+        </ion-list>
+    </ion-content>
 
 </ion-menu>
 

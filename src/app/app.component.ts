@@ -10,6 +10,7 @@ import { Deploy } from "@ionic/cloud-angular";
 
 import { OT_GV, IGV } from './../globalVar/gv';
 import { GF } from './../globalFunc/gf';
+import { AppItem } from "./../models/AppItem";
 import { HomePage } from '../pages/home/home';
 import { GenAppList } from '../pages/genAppList/genAppList';
 
@@ -41,13 +42,18 @@ export class MyApp {
   }
 
   initializeApp(translate) {
-    this.updateFlag = false;
+    // this.updateFlag = false;
     this.globalFunc.loadingPresent();
+
+    this.IGV.myAppItemMap = new Map<string, AppItem>();
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.IGV.isIOS = this.platform.is('ios');
+      this.IGV.isAndroid = this.platform.is('android');
 
       // default language to en
       this.translate.use('en');
@@ -64,22 +70,20 @@ export class MyApp {
           } else {
             this.showLangChoose();
           }
-
-          // watch network for a disconnect
-          this.network.onDisconnect().subscribe(() => {
-            this.globalFunc.showToastNoNetwork();
-          });
-
-          // this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
-
-          // this.deploy.check().then((snapshotAvailable: boolean) => {
-          //   this.updateFlag = snapshotAvailable;
-          //   this.globalFunc.loadingDismiss();
-          // });
-
           this.globalFunc.loadingDismiss();
-
         });
+
+        // watch network for a disconnect
+        this.network.onDisconnect().subscribe(() => {
+          this.globalFunc.showToastNoNetwork();
+        });
+
+        // this.deploy.channel = this.IGV.DEPLOY_CHANNEL;
+
+        // this.deploy.check().then((snapshotAvailable: boolean) => {
+        //   this.updateFlag = snapshotAvailable;
+        //   this.globalFunc.loadingDismiss();
+        // });
 
       }, (error) => {
         this.globalFunc.presentSysErr();
@@ -92,9 +96,20 @@ export class MyApp {
     });
   }
 
+  menuClosed() {
+    //code to execute when menu has closed
+    this.globalFunc.showBanner();
+  }
+
+  menuOpened() {
+    //code to execute when menu ha opened
+    this.globalFunc.removeBanner();
+  }
+
   openPage(page, appItemInd) {
     // close the menu when clicking a link from the menu
     this.menu.close();
+    this.globalFunc.showInterstitial();
     // navigate to the new page if it is not the current page
     let toPage: any;
     switch (page) {

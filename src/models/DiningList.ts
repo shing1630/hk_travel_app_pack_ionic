@@ -18,10 +18,10 @@ export class DiningList {
         mtr.nameCN = 'Openrice';
         mtr.nameZH = 'Openrice';
         mtr.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
-        mtr.iosPic1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        mtr.iosPic2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
-        mtr.androidPlc1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        mtr.androidPlc2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
+        mtr.iosPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
+        mtr.iosPicEN2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
+        mtr.androidPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
+        mtr.androidPicEN2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
         mtr.iosLink = 'https://itunes.apple.com/hk/app/mtr-mobile/id369295276';
         mtr.androiLink = 'https://play.google.com/store/apps/details?id=com.mtr.mtrmobile';
         mtr.editorWordEN = 'Good';
@@ -38,10 +38,8 @@ export class DiningList {
         test.nameCN = '222222222222';
         test.nameZH = '鐵 Test';
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
-        test.iosPic1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        test.iosPic2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
-        test.androidPlc1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
-        test.androidPlc2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
+        test.iosPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
+        test.androidPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
         test.iosLink = 'https://itunes.apple.com/hk/app/mtr-mobile/id369295276';
         test.androiLink = 'https://play.google.com/store/apps/details?id=com.mtr.mtrmobile';
         test.descEN = 'Test';

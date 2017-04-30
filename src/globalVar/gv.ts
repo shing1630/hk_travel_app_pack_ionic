@@ -1,4 +1,5 @@
 import { OpaqueToken } from '@angular/core';
+import { AppItem } from "./../models/AppItem";
 
 export let OT_GV = new OpaqueToken('gv');
 
@@ -9,6 +10,11 @@ export interface IGV {
     admobCount: number;
     gLangInd: string;
     gAppItemInd: string;
+    myAppItemList: AppItem[];
+    myAppItemMap: Map<string, AppItem>;
+
+    isIOS: boolean,
+    isAndroid: boolean,
 
     // Lange
     ERROR_EN: string;
@@ -49,6 +55,13 @@ export const IGV: IGV = {
 
     gLangInd: '',
     gAppItemInd: '',
+
+    myAppItemList: [],
+
+    myAppItemMap: null,
+
+    isIOS: false,
+    isAndroid: false,
 
     // Lang
     ERROR_EN: 'ERROR!',

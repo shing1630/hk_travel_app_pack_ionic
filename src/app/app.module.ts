@@ -9,6 +9,7 @@ import { OT_GV, IGV } from './../globalVar/gv';
 import { IonicStorageModule } from '@ionic/storage';
 import { Network } from '@ionic-native/network';
 import { AdMob } from '@ionic-native/admob';
+import { Market } from '@ionic-native/market';
 import { GF } from './../globalFunc/gf';
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
@@ -58,6 +59,7 @@ const cloudSettings: CloudSettings = {
     AdMob,
     GF,
     Network,
+    Market,
     StatusBar,
     SplashScreen,
     TransportList,

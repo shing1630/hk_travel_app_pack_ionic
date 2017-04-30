@@ -6,6 +6,7 @@
     "CHECK_UPDATE": "Check Update",
     "UPDATE_NOW": "Update Now",
     "HOME": "Home",
+    "MY_FAVOURITE": "My Favourite",
     "TRANSPORT": "Transport",
     "DINING": "Dining",
     "WEATHER": "Weather",
@@ -19,8 +20,7 @@
     "ZH": "繁"
   },  
    "HOME": {
-    "WELCOME": "Welcome",
-    "MY_FAVOURITE": "My Favourite"
+    "WELCOME": "Welcome"
   },
   "GENAPP": {
     "EDITOR_WORD": "Editor's word",

@@ -3,13 +3,106 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{selectedAppItem.nameEN}}</ion-title>
+    <ion-title *ngIf="IGV.gLangInd === 'en'">{{selectedAppItem.nameEN}}</ion-title>
+    <ion-title *ngIf="IGV.gLangInd === 'cn'">{{selectedAppItem.nameCN}}</ion-title>
+    <ion-title *ngIf="IGV.gLangInd === 'zh'">{{selectedAppItem.nameZH}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <div>
-    You navigated here from <b>{{selectedAppItem.descEN}}</b>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 class="centerAndMiddle">
+        <ion-img [width]="75" [height]="75" [src]="selectedAppItem.logoPic"></ion-img>
+      </ion-col>
+      <ion-col col-6>
+        <ion-col col-12>
+          <button *ngIf="!selectedAppItem.saveFlag" ion-button style="width: 130px;" (click)="saveToMyFavourite()">
+            <img width="30" height="30" src="assets/img/empty_star.png">
+          </button>
+          <button *ngIf="selectedAppItem.saveFlag" ion-button style="width: 130px;" (click)="removeFromMyFavourite()">
+            <img width="30" height="30" src="assets/img/star.png">
+          </button>  
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button style="width: 130px;" (click)="openAppStore()">
+            <ion-img *ngIf="IGV.isIOS" [width]="30" [height]="30" src="assets/img/apple.png"></ion-img>
+            <ion-img *ngIf="IGV.isAndroid" [width]="30" [height]="30" src="assets/img/google.png"></ion-img>
+          </button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <ion-img *ngIf="IGV.isIOS && IGV.gLangInd === 'en'" [width]="300" [height]="532" [src]="selectedAppItem.iosPicEN1"></ion-img>
+        <ion-img *ngIf="IGV.isAndroid && IGV.gLangInd === 'en'" [width]="300" [height]="532" [src]="selectedAppItem.androidPicEN1"></ion-img>
+        <ion-img *ngIf="IGV.isIOS && IGV.gLangInd === 'cn'" [width]="300" [height]="532" [src]="selectedAppItem.iosPicCN1"></ion-img>
+        <ion-img *ngIf="IGV.isAndroid && IGV.gLangInd === 'cn'" [width]="300" [height]="532" [src]="selectedAppItem.androidPicCN1"></ion-img>
+        <ion-img *ngIf="IGV.isIOS && IGV.gLangInd === 'zh'" [width]="300" [height]="532" [src]="selectedAppItem.iosPicZH1"></ion-img>
+        <ion-img *ngIf="IGV.isAndroid && IGV.gLangInd === 'zh'" [width]="300" [height]="532" [src]="selectedAppItem.androidPicZH1"></ion-img>
+
+        <ion-img *ngIf="IGV.isIOS && IGV.gLangInd === 'en'" [width]="300" [height]="532" [src]="selectedAppItem.iosPicEN2"></ion-img>
+        <ion-img *ngIf="IGV.isAndroid && IGV.gLangInd === 'en'" [width]="300" [height]="532" [src]="selectedAppItem.androidPicEN2"></ion-img>
+        <ion-img *ngIf="IGV.isIOS && IGV.gLangInd === 'cn'" [width]="300" [height]="532" [src]="selectedAppItem.iosPicCN2"></ion-img>
+        <ion-img *ngIf="IGV.isAndroid && IGV.gLangInd === 'cn'" [width]="300" [height]="532" [src]="selectedAppItem.androidPicCN2"></ion-img>
+        <ion-img *ngIf="IGV.isIOS && IGV.gLangInd === 'zh'" [width]="300" [height]="532" [src]="selectedAppItem.iosPicZH2"></ion-img>
+        <ion-img *ngIf="IGV.isAndroid && IGV.gLangInd === 'zh'" [width]="300" [height]="532" [src]="selectedAppItem.androidPicZH2"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+       <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic fontToBold">
+        {{ 'GENAPP.EDITOR_WORD' | translate }}
+       </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic">
+        <div *ngIf="IGV.gLangInd === 'en'">
+          {{selectedAppItem.editorWordEN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'cn'">
+          {{selectedAppItem.editorWordCN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'zh'">
+          {{selectedAppItem.editorWordZH}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+       <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic fontToBold">
+         {{ 'GENAPP.DESC' | translate }}
+       </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic">
+        <div *ngIf="IGV.gLangInd === 'en'">
+          {{selectedAppItem.descEN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'cn'">
+          {{selectedAppItem.descCN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'zh'">
+          {{selectedAppItem.descZH}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="selectedAppItem.funFactFlag">
+      <ion-col col-12 class="centerAndMiddle">
+        <ion-img [src]="selectedAppItem.funFactPic1"></ion-img>
+        <ion-img [src]="selectedAppItem.funFactPic2"></ion-img>
+      </ion-col>
+      <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic">
+        <div *ngIf="IGV.gLangInd === 'en'">
+          {{selectedAppItem.funFactDescEN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'cn'">
+          {{selectedAppItem.funFactDescCN}}
+        </div>
+        <div *ngIf="IGV.gLangInd === 'zh'">
+          {{selectedAppItem.funFactDescZH}}
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
