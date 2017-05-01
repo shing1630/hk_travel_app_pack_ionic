@@ -1,5 +1,5 @@
 import { Component, Inject, ViewChild } from '@angular/core';
-import { NavController, Content } from 'ionic-angular';
+import { NavController, Content, AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 import { OT_GV, IGV } from './../../globalVar/gv';
@@ -20,6 +20,7 @@ export class GenAppList {
 
   constructor( @Inject(OT_GV) public IGV: IGV,
     public globalFunc: GF,
+    public alertCtrl: AlertController,
     public storage: Storage,
     public navCtrl: NavController,
     public transportList: TransportList,
@@ -96,5 +97,50 @@ export class GenAppList {
       this.IGV.myAppItemMap.delete(appItem.id);
       this.storage.set('myFavourite', { myappItemList: this.IGV.myAppItemList });
     }
+  }
+
+  clearAllMyFavourite() {
+    this.IGV.myAppItemList.length = 0;;
+    this.IGV.myAppItemMap.clear();
+    this.storage.set('myFavourite', { myappItemList: this.IGV.myAppItemList });
+  }
+
+  presentClearAllConfirm() {
+
+    let title: string;
+    let no: string;
+    let yes: string;
+    if (this.IGV.gLangInd === 'zh') {
+      title = this.IGV.CLEAR_ALL_MY_FAVOURITE_ZH;
+      no = this.IGV.NO_ZH;
+      yes = this.IGV.YES_ZH;
+    } if (this.IGV.gLangInd === 'cn') {
+      title = this.IGV.CLEAR_ALL_MY_FAVOURITE_CN;
+      no = this.IGV.NO_CN;
+      yes = this.IGV.YES_CN;
+    } else {
+      title = this.IGV.CLEAR_ALL_MY_FAVOURITE_EN;
+      no = this.IGV.NO_EN;
+      yes = this.IGV.YES_EN;
+    }
+
+    let alert = this.alertCtrl.create({
+      title: title,
+      buttons: [
+        {
+          text: no,
+          role: 'cancel',
+          handler: () => {
+          }
+        },
+        {
+          text: yes,
+          handler: () => {
+            this.clearAllMyFavourite();
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }

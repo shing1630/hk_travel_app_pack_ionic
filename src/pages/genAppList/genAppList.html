@@ -15,6 +15,13 @@
 </ion-header>
 
 <ion-content>
+  <!-- Favourite list -->
+  <div *ngIf="IGV.gAppItemInd === 'favourite' && IGV.myAppItemList.length === 0" class="centerAndMiddle">
+    <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/empty_trash.png">
+    <div class="centerAndMiddle">
+      {{ 'HOME.EMPTY' | translate }}
+    </div>
+  </div>
   <ion-list *ngIf="IGV.gAppItemInd === 'favourite'">
     <ion-item-sliding #item class="borderBottomTo1" *ngFor="let appItem of IGV.myAppItemList">
       <button ion-item (click)="itemTapped($event, appItem)">
@@ -23,7 +30,7 @@
                src="{{appItem.logoPic}}">
         </div>
         <div *ngIf="IGV.gLangInd === 'en'" class="item-note" item-left>
-          {{appItem.nameEN}}
+          {{appItem.nameEN}} 
         </div>
         <div *ngIf="IGV.gLangInd === 'cn'" class="item-note" item-left>
           {{appItem.nameCN}}
@@ -44,6 +51,12 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
+  <button *ngIf="IGV.gAppItemInd === 'favourite' && IGV.myAppItemList.length !== 0" 
+          ion-button full (click)="presentClearAllConfirm()">
+    {{ 'HOME.CLEAR_All' | translate }}
+  </button>
+
+  <!-- General list -->
   <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'">
     <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)">
       <div class="item-note centerAndMiddle" item-left>

@@ -17,10 +17,13 @@
     "LANGUAGE": "语言",
     "EN": "ENG",
     "CN": "简",
-    "ZH": "繁"
+    "ZH": "繁",
+    "SUPPORT": "支持"
   },  
    "HOME": {
-    "WELCOME": "Welcome"
+    "WELCOME": "Welcome",
+    "EMPTY": "空的",
+    "CLEAR_All": "全部清空"
   },
   "GENAPP": {
     "EDITOR_WORD": "编辑的话",

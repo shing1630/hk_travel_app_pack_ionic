@@ -38,6 +38,15 @@ export interface IGV {
     RELOAD_EN: string;
     RELOAD_CN: string;
     RELOAD_ZH: string;
+    CLEAR_ALL_MY_FAVOURITE_EN: string;
+    CLEAR_ALL_MY_FAVOURITE_CN: string;
+    CLEAR_ALL_MY_FAVOURITE_ZH: string;
+    YES_EN: string;
+    YES_CN: string;
+    YES_ZH: string;
+    NO_EN: string;
+    NO_CN: string;
+    NO_ZH: string;
 
     AD_MOB_ID_BANNER: string;
     AD_MOB_ID_INTER: string;
@@ -50,8 +59,8 @@ export const IGV: IGV = {
     DEPLOY_CHANNEL: 'dev',
     // Change it to true when production
 
-    ADMOB_MAX_NUMBER: 5,
-    admobCount: 5,
+    ADMOB_MAX_NUMBER: 15,
+    admobCount: 15,
 
     gLangInd: '',
     gAppItemInd: '',
@@ -90,6 +99,16 @@ export const IGV: IGV = {
     RELOAD_EN: 'Reload',
     RELOAD_CN: '重载',
     RELOAD_ZH: '重載',
+
+    CLEAR_ALL_MY_FAVOURITE_EN: 'Clear All My Favourite?',
+    CLEAR_ALL_MY_FAVOURITE_CN: '清空我的最爱?',
+    CLEAR_ALL_MY_FAVOURITE_ZH: '清空我的最愛?',
+    YES_EN: 'Yes',
+    YES_CN: '是',
+    YES_ZH: '是',
+    NO_EN: 'No',
+    NO_CN: '否',
+    NO_ZH: '否',
 
     AD_MOB_ID_BANNER: '',
     AD_MOB_ID_INTER: ''

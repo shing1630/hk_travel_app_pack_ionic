@@ -10,16 +10,15 @@ import { GenAppList } from './../genAppList/genAppList';
 })
 export class HomePage {
 
-
   constructor(
     @Inject(OT_GV) public IGV: IGV,
     public globalFunc: GF
   ) {
   }
-
+  
   openPage(page: string) {
     this.globalFunc.loadingPresent();
-    setTimeout(function () {
+    setTimeout(() => {
       document.getElementById(page).click();
       this.globalFunc.loadingDismiss();
     }, 2500);

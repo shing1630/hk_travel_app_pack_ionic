@@ -8,23 +8,106 @@
 </ion-header>
 
 <ion-content>
-  {{ 'HOME.WELCOME' | translate }}
-  <!--<ion-grid>
+  <ion-grid>
     <ion-row>
       <ion-col col-6 class="centerAndMiddle">
-        <button ion-button icon-left large strong class="homeBtn applyBasicBgColor colorToWhite" 
-                (click)="openPage('menuFavourite')">
-          <ion-icon name="heart" item-left></ion-icon> 
-          {{ 'MENU.MY_FAVOURITE' | translate }}
+        <button ion-button class="homeBtn" (click)="openPage('menuFavourite')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/favourite.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.MY_FAVOURITE' | translate }}
+              </div>
+          </div>
         </button>
       </ion-col>
       <ion-col col-6 class="centerAndMiddle">
-        <button ion-button icon-left large strong class="homeBtn applyBasicBgColor colorToWhite" 
-                (click)="openPage('menuTransport')">
-          <ion-icon name="subway" item-left></ion-icon> 
-          {{ 'MENU.TRANSPORT' | translate }}
+        <button ion-button class="homeBtn" (click)="openPage('menuTransport')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/transport.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.TRANSPORT' | translate }}
+              </div>
+          </div>
         </button>
       </ion-col>
     </ion-row>
-  </ion-grid>-->
+    <ion-row>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuDining')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/dining.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.DINING' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuWeather')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/weather.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.WEATHER' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuAccommodation')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/accommodation.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.ACCOMMODATION' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuShopping')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/shopping.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.SHOPPING' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuEntertainment')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/entertainment.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.ENTERTAINMENT' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuEmergency')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/emergency.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.EMERGENCY' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="centerAndMiddle">
+        <button ion-button class="homeBtn" (click)="openPage('menuSupport')">
+          <div class="centerAndMiddle">
+              <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/menu/support.png">
+              <div class="centerAndMiddle fontToBold">
+                {{ 'MENU.SUPPORT' | translate }}
+              </div>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
