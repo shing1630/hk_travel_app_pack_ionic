@@ -2,11 +2,12 @@ page-home {
 
 .homeBtn, .homeBtn.activated{
     color: #382E1C;
-    background-color: #FFFFFF;
+    background-color: #C3D2BF;
     min-width: 150px; 
     min-height:120px; 
     max-width: 150px;
-    max-height:120px
+    max-height:120px;
+    box-shadow: none !important;
 }
 
 }

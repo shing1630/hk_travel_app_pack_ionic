@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'MENU.SUPPORT' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #C3D2BF;" >
+  <ion-grid style="background-color: #C3D2BF;">
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <div style="font-size:x-large" class="centerAndMiddle fontToBold">
+          {{ 'SUPPORT.THANKS' | translate }}
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <div *ngIf="IGV.isIOS" class="centerAndMiddle fontToBold">
+          {{ 'SUPPORT.CHECK_UPDATE_IN_APP_STORE' | translate }}
+        </div>
+        <div *ngIf="IGV.isAndroid" class="centerAndMiddle fontToBold">
+          {{ 'SUPPORT.CHECK_UPDATE_IN_GOOGLE_PLAY' | translate }}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <button ion-button (click)="openAppStore()" style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
+          <div class="centerAndMiddle">
+              <img style="min-width: 40px; min-height:40px; max-width: 40px; max-height:40px" src="assets/img/update.png">
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <div class="centerAndMiddle fontToBold">
+          {{ 'SUPPORT.PLEASE_RATE' | translate }}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <button ion-button (click)="openStoreRate()" style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
+          <div class="centerAndMiddle">
+              <img style="min-width: 40px; min-height:40px; max-width: 40px; max-height:40px" src="assets/img/comment.png">
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <div class="centerAndMiddle fontToBold">
+          {{ 'SUPPORT.ALSO_YOU_CAN_SUPPORT_ME_BY' | translate }}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <button ion-button (click)="showInterstitialImmd()" style="min-width: 170px; min-height:50px; max-width: 170px; max-height:50px">
+          <div class="centerAndMiddle">
+             {{ 'SUPPORT.WATCH_NORMAL_ADV' | translate }}
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="centerAndMiddle">
+        <button ion-button (click)="showRewardVideoAd()" style="min-width: 170px; min-height:50px; max-width: 170px; max-height:50px">
+            {{ 'SUPPORT.WATCH_VIDEO_ADV' | translate }}
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

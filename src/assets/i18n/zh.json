@@ -29,5 +29,14 @@
     "EDITOR_WORD": "編輯的話",
     "DESC": "描述",
     "FUN_FACT": "有趣事"
+  },  
+   "SUPPORT": {
+    "THANKS": "多謝！",
+    "CHECK_UPDATE_IN_APP_STORE": "在 APP Store 檢查更新", 
+    "CHECK_UPDATE_IN_GOOGLE_PLAY": "在 Google Play 檢查更新", 
+    "PLEASE_RATE": "請立給予評價和意見",
+    "ALSO_YOU_CAN_SUPPORT_ME_BY": "另外，你也可以透過以下方法去支持我",
+    "WATCH_NORMAL_ADV": "看一則普通頻廣告",
+    "WATCH_VIDEO_ADV": "看一則視頻廣告"
   }
 }

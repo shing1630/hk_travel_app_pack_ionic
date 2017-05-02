@@ -8,7 +8,7 @@
                     {{ 'MENU.UPDATE_NOW' | translate }} 
                 </div>
             </button>-->
-            <button class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('HomePage', 'homePage')">
+            <button class="applyBasicBgColor colorToWhite borderToZero" ion-item (click)="openPage('HomePage', 'homePage')">
                 <img class="centerAndMiddle" style="margin-right: 8px; min-width: 28px; min-height:28px; max-width: 28px; max-height:28px" 
                     src="assets/img/menu/home.png"> {{ 'MENU.HOME' | translate }}
             </button>
@@ -44,10 +44,6 @@
                 <img class="centerAndMiddle" style="margin-right: 8px;  min-height:28px; max-width: 28px; max-height:28px" 
                     src="assets/img/menu/emergency.png"> {{ 'MENU.EMERGENCY' | translate }}
             </button>
-            <ion-item class="applyBasicBgColor colorToWhite">
-                <img class="centerAndMiddle" style="margin-right: 8px;  min-height:28px; max-width: 28px; max-height:28px" src="assets/img/menu/globe_2.png">
-                <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
-            </ion-item>
             <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('en')">
                 {{ 'MENU.EN' | translate }}
             </button>
@@ -57,7 +53,7 @@
             <button class="applyBasicBgColor colorToWhite" ion-item (click)="changeLangInd('zh')">
                 {{ 'MENU.ZH' | translate }}
             </button>
-            <button id="menuSupport" class="applyBasicBgColor colorToWhite" ion-item (click)="openPage('GenAppList', 'support')">
+            <button id="menuSupport" class="applyBasicBgColor colorToWhite borderToZero" ion-item (click)="openPage('SupportPage', 'supportPage')">
                 <img class="centerAndMiddle" style="margin-right: 8px;  min-height:28px; max-width: 28px; max-height:28px" 
                     src="assets/img/menu/support.png"> {{ 'MENU.SUPPORT' | translate }}
             </button>

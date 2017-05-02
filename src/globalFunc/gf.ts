@@ -92,12 +92,15 @@ export class GF {
         if (this.IGV.isAndroid) {
             IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/7147483825';
             IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/8624217023';
+            IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/3543909029';
         } else if (this.IGV.isIOS) {
             IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/2577683427';
             IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/4054416623';
+            IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/2067175827';
         } else {
             IGV.AD_MOB_ID_BANNER = '';
             IGV.AD_MOB_ID_INTER = '';
+            IGV.AD_MOB_ID_VIDEO = '';
         }
     }
 
@@ -149,6 +152,46 @@ export class GF {
 
         this.adMob.prepareInterstitial(adInterOptions)
             .then(() => { this.adMob.showInterstitial(); this.IGV.admobCount = this.IGV.ADMOB_MAX_NUMBER });
+        return true;
+    }
+
+    public showInterstitialImmd() {
+        if (!this.IGV.isAndroid
+            && !this.IGV.isIOS) {
+            return false;
+        }
+
+        let adInterOptions: AdMobOptions = <AdMobOptions>{};
+
+        adInterOptions = {
+            adId: this.IGV.AD_MOB_ID_INTER,
+            isTesting: this.IGV.isTestingAdmob,
+            autoShow: true
+            //adExtras: this.adExtras
+        }
+
+        this.adMob.prepareInterstitial(adInterOptions)
+            .then(() => { this.adMob.showInterstitial(); this.IGV.admobCount = this.IGV.ADMOB_MAX_NUMBER });
+        return true;
+    }
+
+    public showRewardVideoAd() {
+        if (!this.IGV.isAndroid
+            && !this.IGV.isIOS) {
+            return false;
+        }
+        
+        let adInterOptions: AdMobOptions = <AdMobOptions>{};
+
+        adInterOptions = {
+            adId: this.IGV.AD_MOB_ID_VIDEO,
+            isTesting: this.IGV.isTestingAdmob,
+            autoShow: true
+            //adExtras: this.adExtras
+        }
+
+        this.adMob.prepareRewardVideoAd(adInterOptions)
+            .then(() => { this.adMob.showRewardVideoAd(); });
         return true;
     }
 

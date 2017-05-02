@@ -13,6 +13,7 @@ import { GF } from './../globalFunc/gf';
 import { AppItem } from "./../models/AppItem";
 import { HomePage } from '../pages/home/home';
 import { GenAppList } from '../pages/genAppList/genAppList';
+import { SupportPage } from '../pages/support/support';
 
 @Component({
   templateUrl: 'app.html'
@@ -131,6 +132,10 @@ export class MyApp {
       case 'GenAppList': {
         toPage = GenAppList;
         this.IGV.gAppItemInd = appItemInd;
+        break;
+      }
+      case 'SupportPage': {
+        toPage = SupportPage;
         break;
       }
       default: {

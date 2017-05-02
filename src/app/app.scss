@@ -69,11 +69,16 @@ $basicColor: #382E1C;
 }
 
 .list-md .item-block .item-inner, .list-ios .item-block .item-inner {
-  border-bottom: 0;
+  border: 0;
+}
+
+.borderToZero{
+  border: 0 !important;
 }
 
 .borderBottomTo1{
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #13392C;
+  // border-bottom: 1px solid #dedede;
 }
 
 ion-img {

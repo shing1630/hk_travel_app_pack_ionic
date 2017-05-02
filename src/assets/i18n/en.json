@@ -29,5 +29,14 @@
     "EDITOR_WORD": "Editor's word",
     "DESC": "Description",
     "FUN_FACT": "Fun Fact"
+  },  
+   "SUPPORT": {
+    "THANKS": "Thank you!",
+    "CHECK_UPDATE_IN_APP_STORE": "Check update in App Store", 
+    "CHECK_UPDATE_IN_GOOGLE_PLAY": "Check update in Google Play", 
+    "PLEASE_RATE": "Please rate and comment this app now.",
+    "ALSO_YOU_CAN_SUPPORT_ME_BY": "Also, you can support me by",
+    "WATCH_NORMAL_ADV": "Watch normal adv",
+    "WATCH_VIDEO_ADV": "Watch video adv"
   }
 }

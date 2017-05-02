@@ -50,14 +50,15 @@ export interface IGV {
 
     AD_MOB_ID_BANNER: string;
     AD_MOB_ID_INTER: string;
+    AD_MOB_ID_VIDEO: string;
 }
 
 export const IGV: IGV = {
 
-    // Change it to true when production
+    // Change it to false when production
     isTestingAdmob: true,
     DEPLOY_CHANNEL: 'dev',
-    // Change it to true when production
+    // Change it to false when production
 
     ADMOB_MAX_NUMBER: 15,
     admobCount: 15,
@@ -111,6 +112,7 @@ export const IGV: IGV = {
     NO_ZH: '否',
 
     AD_MOB_ID_BANNER: '',
-    AD_MOB_ID_INTER: ''
+    AD_MOB_ID_INTER: '',
+    AD_MOB_ID_VIDEO: ''
 };
 

@@ -9,6 +9,7 @@ import { OT_GV, IGV } from './../globalVar/gv';
 import { IonicStorageModule } from '@ionic/storage';
 import { Network } from '@ionic-native/network';
 import { AdMob } from '@ionic-native/admob';
+import { AppRate } from '@ionic-native/app-rate';
 import { Market } from '@ionic-native/market';
 import { GF } from './../globalFunc/gf';
 
@@ -18,6 +19,7 @@ import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 import { HomePage } from '../pages/home/home';
 import { GenAppList } from '../pages/genAppList/genAppList';
 import { GenApp } from '../pages/genAppList/genApp/genApp';
+import { SupportPage } from '../pages/support/support';
 
 import { TransportList } from './../models/TransportList';
 import { DiningList } from './../models/DiningList';
@@ -33,7 +35,8 @@ const cloudSettings: CloudSettings = {
     MyApp,
     HomePage,
     GenAppList,
-    GenApp
+    GenApp,
+    SupportPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -51,7 +54,8 @@ const cloudSettings: CloudSettings = {
     MyApp,
     HomePage,
     GenAppList,
-    GenApp
+    GenApp,
+    SupportPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
@@ -59,6 +63,7 @@ const cloudSettings: CloudSettings = {
     AdMob,
     GF,
     Network,
+    AppRate,
     Market,
     StatusBar,
     SplashScreen,

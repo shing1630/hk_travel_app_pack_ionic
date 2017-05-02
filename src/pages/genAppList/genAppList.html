@@ -14,7 +14,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content style="background-color: #C3D2BF;" >
   <!-- Favourite list -->
   <div *ngIf="IGV.gAppItemInd === 'favourite' && IGV.myAppItemList.length === 0" class="centerAndMiddle">
     <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" src="assets/img/empty_trash.png">
@@ -22,9 +22,9 @@
       {{ 'HOME.EMPTY' | translate }}
     </div>
   </div>
-  <ion-list *ngIf="IGV.gAppItemInd === 'favourite'">
-    <ion-item-sliding #item class="borderBottomTo1" *ngFor="let appItem of IGV.myAppItemList">
-      <button ion-item (click)="itemTapped($event, appItem)">
+  <ion-list *ngIf="IGV.gAppItemInd === 'favourite'" style="background-color: #C3D2BF;" >
+    <ion-item-sliding #item class="borderBottomTo1" *ngFor="let appItem of IGV.myAppItemList" style="background-color: #C3D2BF;">
+      <button ion-item (click)="itemTapped($event, appItem)" style="background-color: #C3D2BF;">
         <div class="item-note centerAndMiddle" item-left>
           <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" 
                src="{{appItem.logoPic}}">
@@ -57,8 +57,9 @@
   </button>
 
   <!-- General list -->
-  <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'">
-    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)">
+  <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'" >
+    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)"
+            style="background-color: #C3D2BF;" >
       <div class="item-note centerAndMiddle" item-left>
         <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>
       </div>
