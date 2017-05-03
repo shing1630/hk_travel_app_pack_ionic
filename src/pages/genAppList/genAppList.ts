@@ -9,6 +9,7 @@ import { TransportList } from './../../models/TransportList';
 import { DiningList } from './../../models/DiningList';
 import { GenApp } from "./genApp/genApp";
 
+
 @Component({
   selector: 'genAppList',
   templateUrl: 'genAppList.html'

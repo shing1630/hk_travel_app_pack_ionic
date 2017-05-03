@@ -12,6 +12,7 @@ import { AdMob } from '@ionic-native/admob';
 import { AppRate } from '@ionic-native/app-rate';
 import { Market } from '@ionic-native/market';
 import { GF } from './../globalFunc/gf';
+import { IsShowAppItem } from "./../pipe/IsShowAppItem";
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
@@ -33,6 +34,7 @@ const cloudSettings: CloudSettings = {
 @NgModule({
   declarations: [
     MyApp,
+    IsShowAppItem,
     HomePage,
     GenAppList,
     GenApp,

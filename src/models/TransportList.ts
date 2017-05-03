@@ -14,12 +14,14 @@ export class TransportList {
         // MTR
         let mtr = new AppItem();
         mtr.id = 'T001';
+        mtr.iosFlag = true;
+        mtr.androidFlag = true;
         mtr.goodFlag = true;
         mtr.hotFlag = true;
         mtr.saveFlag = false;
-        mtr.nameEN = 'Tramways - Ding Ding';
-        mtr.nameCN = '港铁 MTR';
-        mtr.nameZH = '港鐵 MTR';
+        mtr.nameEN = 'Tramways - Ding Ding both';
+        mtr.nameCN = '香港電車 both';
+        mtr.nameZH = '香港電車 both';
         mtr.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
         mtr.iosPicEN1 = 'https://img.eservice-hk.net/upload/2017/04/26/162123_f9dff8b35171ab83bdbff5210122cd89.jpeg';
         mtr.iosPicEN2 = 'https://img.eservice-hk.net/upload/2017/04/26/162223_6d9e3f981ac6d907792f96e014d731eb.jpeg';
@@ -37,12 +39,14 @@ export class TransportList {
         // Test
         let test = new AppItem();
         test.id = 'T002';
+        test.iosFlag = true;
+        test.androidFlag = false;
         test.saveFlag = false;
         test.goodFlag = true;
         test.hotFlag = true;
-        test.nameEN = 'Test';
-        test.nameCN = '铁 Test';
-        test.nameZH = '鐵 Test';
+        test.nameEN = 'Test ios';
+        test.nameCN = '铁 Test ios';
+        test.nameZH = '鐵 Test ios';
         test.logoPic = 'https://img.eservice-hk.net/upload/2017/04/26/161956_bc05e328de8beb0e44e54dfed21b80ca.jpg';
         test.iosLink = 'https://itunes.apple.com/hk/app/mtr-mobile/id369295276';
         test.androiLink = 'https://play.google.com/store/apps/details?id=com.mtr.mtrmobile';
@@ -60,7 +64,11 @@ export class TransportList {
         // Test
         test = new AppItem();
         test.id = 'T003';
-        test.nameEN = 'Speak Cantonese Free（常用广东话）';
+        test.iosFlag = false;
+        test.androidFlag = true;
+         test.nameEN = 'Speak Cantonese Free android';
+        test.nameCN = '常用广东话 android';
+        test.nameZH = '常用广东话 android';
         test.goodFlag = true;
         test.hotFlag = true;
         test.saveFlag = false;

@@ -57,8 +57,8 @@
   </button>
 
   <!-- General list -->
-  <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'" >
-    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList" (click)="itemTapped($event, appItem)"
+  <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'" class="borderBottomTo1">
+    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList | isShowAppItem" (click)="itemTapped($event, appItem)"
             style="background-color: #C3D2BF;" >
       <div class="item-note centerAndMiddle" item-left>
         <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>

@@ -5,6 +5,8 @@ export class AppItem {
 
     id: string;
 
+    iosFlag: boolean;
+    androidFlag: boolean;
     goodFlag: boolean;
     hotFlag: boolean;
     saveFlag: boolean;

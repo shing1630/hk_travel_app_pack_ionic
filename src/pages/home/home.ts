@@ -1,5 +1,5 @@
-import { Component, Inject } from '@angular/core';
-import { DebugElement, } from '@angular/core';
+import { Component, Inject, ViewChild } from '@angular/core';
+import { Content } from 'ionic-angular';
 
 import { OT_GV, IGV } from './../../globalVar/gv';
 import { GF } from './../../globalFunc/gf';
@@ -10,28 +10,29 @@ import { GF } from './../../globalFunc/gf';
 })
 export class HomePage {
 
+  @ViewChild(Content) content: Content;
+
   constructor(
     @Inject(OT_GV) public IGV: IGV,
     public globalFunc: GF
-  ) {
+  ) {}
+
+  ngAfterViewInit() {
+    this.content.ionScrollEnd.subscribe(($event: any) => {
+      if (this.content.getContentDimensions().scrollTop
+        + this.content.getContentDimensions().contentHeight
+        >= this.content.getContentDimensions().scrollHeight) {
+        this.globalFunc.removeBanner();
+      }
+    });
   }
 
   openPage(page: string) {
-    // this.globalFunc.loadingPresent();
-    this.simulateClick(document.getElementById(page));
-  }
-
-  ButtonClickEvents = {
-    left: { button: 0 },
-    right: { button: 2 }
-  };
-
-  simulateClick(el: DebugElement | HTMLElement, eventObj: any = this.ButtonClickEvents.left): void {
-    if (el instanceof HTMLElement) {
-      el.click();
-    } else {
-      el.triggerEventHandler('click', eventObj);
-    }
+    this.globalFunc.loadingPresent();
+    setTimeout(() => {
+      document.getElementById(page).click();
+      this.globalFunc.loadingDismiss();
+    }, 2500);
   }
 
 }
