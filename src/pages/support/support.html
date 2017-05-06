@@ -7,8 +7,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content style="background-color: #C3D2BF;" >
-  <ion-grid style="background-color: #C3D2BF;">
+<ion-content >
+  <ion-grid >
     <ion-row>
       <ion-col col-12 class="centerAndMiddle">
         <div style="font-size:x-large" class="centerAndMiddle fontToBold">
@@ -29,7 +29,12 @@
     </ion-row>
     <ion-row>
       <ion-col col-12 class="centerAndMiddle">
-        <button ion-button (click)="openAppStore()" style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
+        <a *ngIf="IGV.isIOS" href="">
+          <button ion-button style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
+            <img style="min-width: 40px; min-height:40px; max-width: 40px; max-height:40px" src="assets/img/update.png">
+          </button>
+        </a>
+        <button *ngIf="IGV.isAndroid" ion-button (click)="openAppStore()" style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
           <div class="centerAndMiddle">
               <img style="min-width: 40px; min-height:40px; max-width: 40px; max-height:40px" src="assets/img/update.png">
           </div>
@@ -46,7 +51,12 @@
     </ion-row>
     <ion-row>
       <ion-col col-12 class="centerAndMiddle">
-        <button ion-button (click)="openStoreRate()" style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
+        <a *ngIf="IGV.isIOS" href="">
+          <button ion-button style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
+            <img style="min-width: 40px; min-height:40px; max-width: 40px; max-height:40px" src="assets/img/comment.png">
+          </button>
+        </a>
+        <button *ngIf="IGV.isAndroid" ion-button (click)="openStoreRate()" style="min-width: 150px; min-height:50px; max-width: 150px; max-height:50px">
           <div class="centerAndMiddle">
               <img style="min-width: 40px; min-height:40px; max-width: 40px; max-height:40px" src="assets/img/comment.png">
           </div>
@@ -68,11 +78,14 @@
              {{ 'SUPPORT.WATCH_NORMAL_ADV' | translate }}
           </div>
         </button>
+        <div class="centerAndMiddle fontToBold">
+          {{ 'SUPPORT.CLICK_THE_ADV_IF_YOU_ARE_INTERETED' | translate }}
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-12 class="centerAndMiddle">
-        <button ion-button (click)="showRewardVideoAd()" style="min-width: 170px; min-height:50px; max-width: 170px; max-height:50px">
+        <button *ngIf="IGV.isAndroid" ion-button (click)="showRewardVideoAd()" style="min-width: 170px; min-height:50px; max-width: 170px; max-height:50px">
             {{ 'SUPPORT.WATCH_VIDEO_ADV' | translate }}
         </button>
       </ion-col>

@@ -90,17 +90,17 @@ export class GF {
 
     public setAdMobIds() {
         if (this.IGV.isAndroid) {
-            IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/7147483825';
-            IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/8624217023';
-            IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/3543909029';
+            this.IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/7147483825';
+            this.IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/8624217023';
+            this.IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/3543909029';
         } else if (this.IGV.isIOS) {
-            IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/2577683427';
-            IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/4054416623';
-            IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/2067175827';
+            this.IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/2577683427';
+            this.IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/4054416623';
+            this.IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/2067175827';
         } else {
-            IGV.AD_MOB_ID_BANNER = '';
-            IGV.AD_MOB_ID_INTER = '';
-            IGV.AD_MOB_ID_VIDEO = '';
+            this.IGV.AD_MOB_ID_BANNER = '';
+            this.IGV.AD_MOB_ID_INTER = '';
+            this.IGV.AD_MOB_ID_VIDEO = '';
         }
     }
 

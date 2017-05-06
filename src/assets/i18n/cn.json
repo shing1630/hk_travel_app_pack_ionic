@@ -34,9 +34,10 @@
     "THANKS": "多谢！",
     "CHECK_UPDATE_IN_APP_STORE": "在 APP Store 检查更新", 
     "CHECK_UPDATE_IN_GOOGLE_PLAY": "在 Google Play 检查更新", 
-    "PLEASE_RATE": "请立给予评价和意见。",
+    "PLEASE_RATE": "请给予评价和意见。",
     "ALSO_YOU_CAN_SUPPORT_ME_BY": "另外，你也可以透过以下方法去支持我",
-    "WATCH_NORMAL_ADV": "看一则普通频广告",
+    "WATCH_NORMAL_ADV": "看一则普通广告",
+    "CLICK_THE_ADV_IF_YOU_ARE_INTERETED": "(可点击有兴趣的广告！)",
     "WATCH_VIDEO_ADV": "看一则视频广告"
   }
 }

@@ -34,9 +34,10 @@
     "THANKS": "多謝！",
     "CHECK_UPDATE_IN_APP_STORE": "在 APP Store 檢查更新", 
     "CHECK_UPDATE_IN_GOOGLE_PLAY": "在 Google Play 檢查更新", 
-    "PLEASE_RATE": "請立給予評價和意見",
+    "PLEASE_RATE": "請給予評價和意見",
     "ALSO_YOU_CAN_SUPPORT_ME_BY": "另外，你也可以透過以下方法去支持我",
-    "WATCH_NORMAL_ADV": "看一則普通頻廣告",
+    "WATCH_NORMAL_ADV": "看一則普通廣告",
+    "CLICK_THE_ADV_IF_YOU_ARE_INTERETED": "(可點擊有興趣的廣告！)",
     "WATCH_VIDEO_ADV": "看一則視頻廣告"
   }
 }

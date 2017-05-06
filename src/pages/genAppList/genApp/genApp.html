@@ -9,7 +9,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content style="background-color: #C3D2BF;" >
+<ion-content >
 
   <ion-grid>
     <ion-row>
@@ -26,9 +26,13 @@
           </button>  
         </ion-col>
         <ion-col col-12>
-          <button ion-button style="width: 130px;" (click)="openAppStore()">
-            <ion-img *ngIf="IGV.isIOS" [width]="30" [height]="30" src="assets/img/apple.png"></ion-img>
-            <ion-img *ngIf="IGV.isAndroid" [width]="30" [height]="30" src="assets/img/google.png"></ion-img>
+          <a *ngIf="IGV.isIOS" href="{{selectedAppItem.iosLink}}">
+          <button  ion-button style="width: 130px;" >
+            <ion-img  [width]="30" [height]="30" src="assets/img/apple.png"></ion-img>
+          </button>
+          </a>
+          <button *ngIf="IGV.isAndroid" ion-button style="width: 130px;" (click)="openAppStore()">
+            <ion-img [width]="30" [height]="30" src="assets/img/google.png"></ion-img>
           </button>
         </ion-col>
       </ion-col>
@@ -51,7 +55,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-       <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic fontToBold">
+       <ion-col col-12 class="leftAndMiddle fontSizeTo25 colorToBasic fontToBold">
         {{ 'GENAPP.EDITOR_WORD' | translate }}
        </ion-col>
     </ion-row>
@@ -69,20 +73,17 @@
       </ion-col>
     </ion-row>
     <ion-row>
-       <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic fontToBold">
+       <ion-col col-12 class="leftAndMiddle fontSizeTo25 colorToBasic fontToBold">
          {{ 'GENAPP.DESC' | translate }}
        </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-12 class="leftAndMiddle fontSizeTo18 colorToBasic">
-        <div *ngIf="IGV.gLangInd === 'en'">
-          {{selectedAppItem.descEN}}
+        <div [innerHTML]="selectedAppItem.descEN" *ngIf="IGV.gLangInd === 'en'">
         </div>
-        <div *ngIf="IGV.gLangInd === 'cn'">
-          {{selectedAppItem.descCN}}
+        <div [innerHTML]="selectedAppItem.descCN" *ngIf="IGV.gLangInd === 'cn'">
         </div>
-        <div *ngIf="IGV.gLangInd === 'zh'">
-          {{selectedAppItem.descZH}}
+        <div [innerHTML]="selectedAppItem.descZH" *ngIf="IGV.gLangInd === 'zh'">
         </div>
       </ion-col>
     </ion-row>
