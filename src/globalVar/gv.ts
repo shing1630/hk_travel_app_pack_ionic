@@ -56,7 +56,7 @@ export interface IGV {
 export const IGV: IGV = {
 
     // Change it to false when production
-    isTestingAdmob: true,
+    isTestingAdmob: false,
     DEPLOY_CHANNEL: 'dev',
     // Change it to false when production
 
