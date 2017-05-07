@@ -578,11 +578,11 @@ export class TransportList {
                                     -With route direction explained in detail, show it to the taxi driver when they go to the wrong way<br>
                                     -Voice Translation of address in Cantonese ****GOOD FOR VISTOR IN HK*****<br>
                                     -Traffic Condition in HK, powered by DATA.GOV.HK`
-        transportAppItem.descCN = `每次乘坐的士时系唔系好想知道去到目的地大约要几多钱？
+        transportAppItem.descCN = `每次乘坐的士时想知道去到目的地大约要多少钱？
                                     <br><br>
-                                    用下呢个App 就可以立即知道大约几多钱 同 司机有冇乱行多咗路，心情都定啲。
+                                    利用这个App 就可以立即知道大约要多少钱和司机有没有乱行多了，心情都安定点。
                                     <br><br>
-                                    Call Van 便宜啲 或系 乖的士价钱便宜啲，用个HK Taxi Fare App 一计就知.
+                                    Call Van 的士价钱便宜与否，利用这个HK Taxi Fare App 就清楚.
                                     <br><br>
                                     HK Taxi Fare App 可以让你随时随地计算香港的士车费，更易节省您的时间和金钱。提供极力推荐的85 折 的士司机的联络电话。
                                     <br><br>
@@ -1039,7 +1039,7 @@ export class TransportList {
                                     * Check the sailing information in real time.<br>
                                     * Quick and Safe ticket purchasing service.<br>
                                     * Member/ Non-member purchasing service.`
-        transportAppItem.descCN = `唔想排队买船飞? 唔想去到先知无位! 马上下载金光飞航手机购票程式!<br>
+        transportAppItem.descCN = `不想排队买船飞? 不想到达後才得知满座! 马上下载金光飞航手机购票程式!<br>
                                     随时随地查询航班资讯，无论你身在家中或街外，只需要经过简单的步骤便可完成购票。<br>
                                     *实时航班资讯<br>
                                     *最快捷最安全购票服务<br>
@@ -1084,7 +1084,7 @@ export class TransportList {
         transportAppItem.androidPicCN2 = 'https://vgy.me/EyQe4i.png'
         transportAppItem.androidPicZH2 = 'https://vgy.me/r1gnkp.png'
         transportAppItem.editorWordEN = 'Famous app speak for itself.'
-        transportAppItem.editorWordCN = '着名的应用程序，不用多说。'
+        transportAppItem.editorWordCN = '著名的应用程序，不用多说。'
         transportAppItem.editorWordZH = '著名的應用程序，不用多說。'
         transportAppItem.descEN = `Uber is a ridesharing app for fast, reliable rides in minutes—day or night. There’s no need to park or wait for a taxi or bus. With Uber, you just tap to request a ride, and it’s easy to pay with credit or cash in select cities.
                                     <br><br>
