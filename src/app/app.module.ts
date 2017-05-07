@@ -25,6 +25,10 @@ import { SupportPage } from '../pages/support/support';
 import { TransportList } from './../models/TransportList';
 import { DiningList } from './../models/DiningList';
 import { WeatherList } from './../models/WeatherList';
+import { AccommodationList } from './../models/AccommodationList';
+import { ShoppingList } from './../models/ShoppingList';
+import { EntertainmentList } from './../models/EntertainmentList';
+import { UtilityList } from './../models/UtilityList';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -72,7 +76,11 @@ const cloudSettings: CloudSettings = {
     SplashScreen,
     TransportList,
     DiningList,
-    WeatherList
+    WeatherList,
+    AccommodationList,
+    ShoppingList,
+    EntertainmentList,
+    UtilityList
   ]
 })
 export class AppModule { }

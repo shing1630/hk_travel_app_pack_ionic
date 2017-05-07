@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.hkTravelAppPack0730" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>HK Travel App Pack</name>
-  <description>An awesome Ionic/Cordova app.</description>
+  <name>HKTAP</name>
+  <description>HK Travel App Pack</description>
   <author email="hi@gmail.com" href="http://hi">Josh</author>
   <content src="index.html"/>
   <access origin="*"/>

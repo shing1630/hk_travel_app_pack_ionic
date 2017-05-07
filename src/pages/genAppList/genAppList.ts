@@ -8,6 +8,10 @@ import { AppItem } from "./../../models/AppItem";
 import { TransportList } from './../../models/TransportList';
 import { DiningList } from './../../models/DiningList';
 import { WeatherList } from './../../models/WeatherList';
+import { AccommodationList } from './../../models/AccommodationList';
+import { ShoppingList } from './../../models/ShoppingList';
+import { EntertainmentList } from './../../models/EntertainmentList';
+import { UtilityList } from './../../models/UtilityList';
 import { GenApp } from "./genApp/genApp";
 
 @Component({
@@ -26,7 +30,11 @@ export class GenAppList {
     public navCtrl: NavController,
     public transportList: TransportList,
     public diningList: DiningList,
-    public weatherList: WeatherList) {
+    public weatherList: WeatherList,
+    public accommodationList: AccommodationList,
+    public shoppingList: ShoppingList,
+    public entertainmentList: EntertainmentList,
+    public utilityList: UtilityList,) {
 
     switch (this.IGV.gAppItemInd) {
       case 'favourite': {
@@ -46,19 +54,19 @@ export class GenAppList {
         break;
       }
       case 'accommodation': {
-        // this.appItemList = diningList.list;
+         this.appItemList = accommodationList.list;
         break;
       }
       case 'shopping': {
-        // this.appItemList = diningList.list;
+         this.appItemList = shoppingList.list;
         break;
       }
       case 'entertainment': {
-        // this.appItemList = diningList.list;
+         this.appItemList = entertainmentList.list;
         break;
       }
       case 'utility': {
-        // this.appItemList = diningList.list;
+         this.appItemList = utilityList.list;
         break;
       }
       default: {
