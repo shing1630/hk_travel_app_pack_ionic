@@ -24,6 +24,7 @@ import { SupportPage } from '../pages/support/support';
 
 import { TransportList } from './../models/TransportList';
 import { DiningList } from './../models/DiningList';
+import { WeatherList } from './../models/WeatherList';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -70,7 +71,8 @@ const cloudSettings: CloudSettings = {
     StatusBar,
     SplashScreen,
     TransportList,
-    DiningList
+    DiningList,
+    WeatherList
   ]
 })
 export class AppModule { }

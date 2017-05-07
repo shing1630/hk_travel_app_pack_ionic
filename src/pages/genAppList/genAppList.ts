@@ -7,8 +7,8 @@ import { GF } from './../../globalFunc/gf';
 import { AppItem } from "./../../models/AppItem";
 import { TransportList } from './../../models/TransportList';
 import { DiningList } from './../../models/DiningList';
+import { WeatherList } from './../../models/WeatherList';
 import { GenApp } from "./genApp/genApp";
-
 
 @Component({
   selector: 'genAppList',
@@ -25,7 +25,8 @@ export class GenAppList {
     public storage: Storage,
     public navCtrl: NavController,
     public transportList: TransportList,
-    public diningList: DiningList) {
+    public diningList: DiningList,
+    public weatherList: WeatherList) {
 
     switch (this.IGV.gAppItemInd) {
       case 'favourite': {
@@ -41,7 +42,7 @@ export class GenAppList {
         break;
       }
       case 'weather': {
-        // this.appItemList = diningList.list;
+         this.appItemList = weatherList.list;
         break;
       }
       case 'accommodation': {
@@ -56,7 +57,7 @@ export class GenAppList {
         // this.appItemList = diningList.list;
         break;
       }
-      case 'emergency': {
+      case 'utility': {
         // this.appItemList = diningList.list;
         break;
       }

@@ -10,7 +10,7 @@
     <ion-title *ngIf="IGV.gAppItemInd === 'accommodation'">{{ 'MENU.ACCOMMODATION' | translate }}</ion-title>
     <ion-title *ngIf="IGV.gAppItemInd === 'shopping'">{{ 'MENU.SHOPPING' | translate }}</ion-title>
     <ion-title *ngIf="IGV.gAppItemInd === 'entertainment'">{{ 'MENU.ENTERTAINMENT' | translate }}</ion-title>
-    <ion-title *ngIf="IGV.gAppItemInd === 'emergency'">{{ 'MENU.EMERGENCY' | translate }}</ion-title>
+    <ion-title *ngIf="IGV.gAppItemInd === 'utility'">{{ 'MENU.UTILITY' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -29,16 +29,16 @@
           <img style="min-width: 75px; min-height:75px; max-width: 75px; max-height:75px" 
                src="{{appItem.logoPic}}">
         </div>
-        <div *ngIf="IGV.gLangInd === 'en'" class="item-note" item-left>
-          {{appItem.nameEN}} 
+        <div *ngIf="IGV.gLangInd === 'en'" class="item-note forceToMiddle" item-left style="min-width: 41%; max-width: 41%;">
+          {{appItem.nameEN}}
         </div>
-        <div *ngIf="IGV.gLangInd === 'cn'" class="item-note" item-left>
+        <div *ngIf="IGV.gLangInd === 'cn'" class="item-note forceToMiddle" item-left style="min-width: 41%; max-width: 41%;">
           {{appItem.nameCN}}
         </div>
-        <div *ngIf="IGV.gLangInd === 'zh'" class="item-note" item-left>
+        <div *ngIf="IGV.gLangInd === 'zh'" class="item-note forceToMiddle" item-left style="min-width: 41%; max-width: 41%;">
           {{appItem.nameZH}}
         </div>
-        <div class="item-note rightAndMiddle" item-left>
+        <div class="item-note " item-right style="width: 27px !important;">
           <img *ngIf="appItem.goodFlag" width="25" height="25" src="assets/img/good.png">
           <img *ngIf="appItem.hotFlag" width="25" height="25" src="assets/img/hot.png">
           <img *ngIf="appItem.saveFlag" width="25" height="25" src="assets/img/star.png">
@@ -58,22 +58,22 @@
 
   <!-- General list -->
   <ion-list *ngIf="IGV.gAppItemInd !== 'favourite'" class="borderBottomTo1">
-    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList | isShowAppItem" (click)="itemTapped($event, appItem)" >
+    <button ion-item class="borderBottomTo1" *ngFor="let appItem of appItemList " (click)="itemTapped($event, appItem)" >
       <div class="item-note centerAndMiddle" item-left>
         <ion-img [width]="75" [height]="75" [src]="appItem.logoPic"></ion-img>
       </div>
      
-      <div *ngIf="IGV.gLangInd === 'en'" class="item-note forceToMiddle" item-left style="min-width: 160px; min-height:75px; max-width: 160px; max-height:75px">
+      <div *ngIf="IGV.gLangInd === 'en'" class="item-note forceToMiddle" item-left style="min-width: 41%; max-width: 41%;">
         {{appItem.nameEN}} 
       </div>
-      <div *ngIf="IGV.gLangInd === 'cn'" class="item-note forceToMiddle" item-left style="min-width: 160px; min-height:75px; max-width: 160px; max-height:75px">
+      <div *ngIf="IGV.gLangInd === 'cn'" class="item-note forceToMiddle" item-left style="min-width: 41%; max-width: 41%;">
         {{appItem.nameCN}}
       </div>
-      <div *ngIf="IGV.gLangInd === 'zh'" class="item-note forceToMiddle" item-left style="min-width: 160px; min-height:75px; max-width: 160px; max-height:75px">
+      <div *ngIf="IGV.gLangInd === 'zh'" class="item-note forceToMiddle" item-left style="min-width: 41%; max-width: 41%;">
         {{appItem.nameZH}}
       </div>
 
-      <div class="item-note rightAndMiddle" item-left>
+      <div class="item-note" item-right style="width: 27px !important;">
         <img *ngIf="appItem.goodFlag" width="25" height="25" src="assets/img/good.png">
         <img *ngIf="appItem.hotFlag" width="25" height="25" src="assets/img/hot.png">
         <img *ngIf="appItem.saveFlag" width="25" height="25" src="assets/img/star.png">
