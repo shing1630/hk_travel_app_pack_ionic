@@ -626,7 +626,7 @@ export class TransportList {
         transportAppItem.goodFlag = false
         transportAppItem.hotFlag = false
         transportAppItem.saveFlag = false
-        transportAppItem.nameEN = 'HK TAXI FARE CALTOR'
+        transportAppItem.nameEN = 'HK Taxi Fare Caltor'
         transportAppItem.nameCN = '的士收费计算机'
         transportAppItem.nameZH = '的士收費計算機'
         transportAppItem.logoPic = 'https://vgy.me/IFsNsz.png'
