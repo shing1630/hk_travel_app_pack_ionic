@@ -38,7 +38,7 @@ export class TransportList {
         transportAppItem.androidPicEN2 = 'https://vgy.me/J5yKJD.png';
         transportAppItem.androidPicCN2 = 'https://vgy.me/gjxm6E.png';
         transportAppItem.androidPicZH2 = 'https://vgy.me/gjxm6E.png';
-        transportAppItem.editorWordEN = 'This is an offical Mass Transit Railway (MTR) app. Suggest visitors download this app because it provides route, fare and tourist info. Even the local people will use it. PS: Only one railway company in Hong Kong.'
+        transportAppItem.editorWordEN = 'This is an offical Mass Transit Railway (MTR) app. Recommanded because it provides route, fare and tourist info. Even the local people use it. Remarks: Only one railway company in Hong Kong.'
         transportAppItem.editorWordCN = '这是官方港铁应用程式。 建议旅客下载此应用程式，因为它提供车费丶建议路綫丶预计乘车时间丶车资等。当地香港人也会用此程式。备注： 香港只有一间铁路公司。'
         transportAppItem.editorWordZH = '這是官方港鐵應用程式。 建議旅客下載此應用程式，因為它提供車費、建議路綫、預計乘車時間、車資等。當地香港人也會用此程式。備註： 香港只有一間鐵路公司。'
         transportAppItem.descEN = `MTR Mobile brings you all sorts of useful information relating to MTR trips to help you plan your journey effectively!
@@ -560,7 +560,7 @@ export class TransportList {
         transportAppItem.androidPicEN2 = '';
         transportAppItem.androidPicCN2 = '';
         transportAppItem.androidPicZH2 = '';
-        transportAppItem.editorWordEN = 'Easy too use and accurated'
+        transportAppItem.editorWordEN = 'Easy to use and accurate'
         transportAppItem.editorWordCN = '容易使用和精确'
         transportAppItem.editorWordZH = '容易使用和精確'
         transportAppItem.descEN = `No more afraid of Scam Taxi Driver!!! 
@@ -901,7 +901,7 @@ export class TransportList {
         transportAppItem.androidPicEN2 = 'https://vgy.me/nZPbu4.png'
         transportAppItem.androidPicCN2 = 'https://vgy.me/OQ15mS.png'
         transportAppItem.androidPicZH2 = 'https://vgy.me/OQ15mS.png'
-        transportAppItem.editorWordEN = 'It is a transport department offical app for releasing traffic news. Not very good but reliable.'
+        transportAppItem.editorWordEN = 'It is an offical app of Government Transport Department for announcing traffic news. Not very good but reliable.'
         transportAppItem.editorWordCN = '这是一个运输处官方应用程序，用作发布交通新闻。不是很好但可靠。'
         transportAppItem.editorWordZH = '這是一個運輸處官方應用程序，用作發布交通新聞。不是很好但可靠。'
         transportAppItem.descEN = `eTraffic News provides the latest news of traffic incidents and service disruption of public transport services with concise headlines, enabling users to grasp the brief details of the incidents at a glance. Customised notifications for designated categories and muting periods are also available. Moreover, the app lists out the major traffic notices issued by the Transport Department, and will issue alerts to users on the effective dates for advance journey planning.

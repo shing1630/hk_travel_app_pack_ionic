@@ -46,7 +46,9 @@ const cloudSettings: CloudSettings = {
     SupportPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: ''
+    }),
     BrowserModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,

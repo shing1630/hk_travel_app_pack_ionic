@@ -322,7 +322,7 @@ export class UtilityList {
         utilityAppItem.androidPicEN2 = 'https://vgy.me/E3zpnd.png'
         utilityAppItem.androidPicCN2 = 'https://vgy.me/E3zpnd.png'
         utilityAppItem.androidPicZH2 = 'https://vgy.me/E3zpnd.png'
-        utilityAppItem.editorWordEN = 'Calculate postage and Find your nearest post offices and street posting boxes.'
+        utilityAppItem.editorWordEN = 'Calculate postage and find your nearest post offices and street posting boxes.'
         utilityAppItem.editorWordCN = '计算邮费和搜寻附近的邮政局及邮箱。'
         utilityAppItem.editorWordZH = '計算郵費和搜尋附近的郵政局及郵箱。'
         utilityAppItem.descEN = `This mobile application is produced by the Hongkong Post. It gives you an instant, on-the-go access to the postal information of Hong Kong.

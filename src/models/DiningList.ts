@@ -39,8 +39,8 @@ export class DiningList {
         diningtAppItem.androidPicCN2 = 'https://vgy.me/if2J0p.png'
         diningtAppItem.androidPicZH2 = 'https://vgy.me/if2J0p.png'
         diningtAppItem.editorWordEN = 'Famous local dining app. The largest restaurant/review search engine in Hong Kong. If you love food, you do not want to miss it.'
-        diningtAppItem.editorWordCN = '当地着名最大的餐厅/评论搜索引擎。如果你喜欢食，不会错过它。'
-        diningtAppItem.editorWordZH = '當地著名最大的餐廳/評論搜索引擎。如果你喜歡食，不會錯過它。'
+        diningtAppItem.editorWordCN = '当地着名最大的餐厅/评论搜索引擎。如果你喜欢美食，不会错过它。'
+        diningtAppItem.editorWordZH = '當地著名最大的餐廳/評論搜索引擎。如果你喜歡美食，不會錯過它。'
         diningtAppItem.descEN = `OpenRice : Search, Food Trend, Offers, Table Booking and Meal Invitation are All-in-One!
                                 <br><br>
                                 OpenRice has consolidated the restaurant database of Hong Kong, Macau, Taiwan, Japan, Thailand, Singapore, Malaysia and Indonesia in the new version of App, offering you more than an ordinary restaurant search engine. Besides Restaurant Name, Cuisine Type, District and specific filters, the App has been enhanced in various aspects to facilitate your search, for the best matching with your personal dining preferences.
