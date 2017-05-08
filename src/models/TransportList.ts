@@ -38,9 +38,9 @@ export class TransportList {
         transportAppItem.androidPicEN2 = 'https://vgy.me/J5yKJD.png';
         transportAppItem.androidPicCN2 = 'https://vgy.me/gjxm6E.png';
         transportAppItem.androidPicZH2 = 'https://vgy.me/gjxm6E.png';
-        transportAppItem.editorWordEN = 'This is an offical Mass Transit Railway (MTR) app. I suggest visitors download this app because it provides route, fare and tourist info. Even the local people will use it. PS: Only one railway company in Hong Kong.';
-        transportAppItem.editorWordCN = '这是官方港铁应用程式。 我建议旅客下载此应用程式，因为它提供车费丶建议路綫丶预计乘车时间丶车资等。当地香港人也会用此程式。备注： 香港只有一间铁路公司。';
-        transportAppItem.editorWordZH = '這是官方港鐵應用程式。 我建議旅客下載此應用程式，因為它提供車費、建議路綫、預計乘車時間、車資等。當地香港人也會用此程式。備註： 香港只有一間鐵路公司。';
+        transportAppItem.editorWordEN = 'This is an offical Mass Transit Railway (MTR) app. Suggest visitors download this app because it provides route, fare and tourist info. Even the local people will use it. PS: Only one railway company in Hong Kong.'
+        transportAppItem.editorWordCN = '这是官方港铁应用程式。 建议旅客下载此应用程式，因为它提供车费丶建议路綫丶预计乘车时间丶车资等。当地香港人也会用此程式。备注： 香港只有一间铁路公司。'
+        transportAppItem.editorWordZH = '這是官方港鐵應用程式。 建議旅客下載此應用程式，因為它提供車費、建議路綫、預計乘車時間、車資等。當地香港人也會用此程式。備註： 香港只有一間鐵路公司。'
         transportAppItem.descEN = `MTR Mobile brings you all sorts of useful information relating to MTR trips to help you plan your journey effectively!
                             <br><br>   
                             Train Trip Planner<br> 
@@ -139,9 +139,9 @@ export class TransportList {
         transportAppItem.androidPicEN2 = 'https://vgy.me/oixkRT.png'
         transportAppItem.androidPicCN2 = 'https://vgy.me/AD9dWs.png'
         transportAppItem.androidPicZH2 = 'https://vgy.me/zprtyE.png'
-        transportAppItem.editorWordEN = 'The interface is not user friendly but it contains enough information from different transportation e.g. bus, railway, ferry. So I suggest you can check the route in this app first.'
-        transportAppItem.editorWordCN = '介面不太易操作，但应用程式内的资讯和数据也很足够，例如有巴士丶地铁丶渡船。所以我建议可先在此程式查询路线。'
-        transportAppItem.editorWordZH = '介面不太易操作，但應用程式內的資訊和數據也很足夠，例如有巴士、地鐵、渡船。所以我建議可先在此程式查詢路線。'
+        transportAppItem.editorWordEN = 'The interface is not user friendly but it contains enough information from different transportation e.g. bus, railway, ferry. Suggest you can check the route in this app first.'
+        transportAppItem.editorWordCN = '介面不太易操作，但应用程式内的资讯和数据也很足够，例如有巴士丶地铁丶渡船。建议可先在此程式查询路线。'
+        transportAppItem.editorWordZH = '介面不太易操作，但應用程式內的資訊和數據也很足夠，例如有巴士、地鐵、渡船。建議可先在此程式查詢路線。'
         transportAppItem.descEN = `This application provides one-stop service of point to point public transport route enquiry for pre-trip planning. The public transport services include Rails, Buses, Green Minibus, Ferry, Tram, Cross Boundary Coach to Huanggang, Buses to Ma Wan and Discovery Bay with adult fare information and elderly fare concession. 
                                     Features include:
                                     <br><br>

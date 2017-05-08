@@ -64,6 +64,13 @@ $basicColor: #382E1C;
 	color: red;
 }
 
+.img-unloaded{
+  background-image: url("../assets/img/img_loading.gif");
+  background-size: 60px 45px;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
 .fontToBold{
   font-weight: bold;
 }
