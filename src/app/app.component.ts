@@ -67,8 +67,14 @@ export class MyApp {
         // Get mySetting
         this.storage.get('mySetting').then((val) => {
           if (val !== null) {
-            this.translate.use(val.langInd);
-            this.IGV.gLangInd = val.langInd;
+            if (val.langInd !== 'en' && val.langInd !== 'cn' && val.langInd !== 'zh') {
+              // default language to en
+              this.translate.use('en');
+              this.IGV.gLangInd = 'en';
+            } else {
+              this.translate.use(val.langInd);
+              this.IGV.gLangInd = val.langInd;
+            }
           } else {
             this.showLangChoose();
           }
@@ -110,12 +116,12 @@ export class MyApp {
 
   menuClosed() {
     //code to execute when menu has closed
-    this.globalFunc.showBanner();
+    //this.globalFunc.showBanner();
   }
 
   menuOpened() {
     //code to execute when menu ha opened
-    this.globalFunc.removeBanner();
+    //this.globalFunc.removeBanner();
   }
 
   openPage(page, appItemInd) {

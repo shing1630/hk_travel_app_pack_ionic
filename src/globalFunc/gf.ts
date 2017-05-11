@@ -84,7 +84,7 @@ export class GF {
             return;
         }
         this.setAdMobIds();
-        this.showBanner();
+        //this.showBanner();
         this.showInterstitial();
     }
 
@@ -92,14 +92,17 @@ export class GF {
         if (this.IGV.isAndroid) {
             this.IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/7147483825';
             this.IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/8624217023';
+            this.IGV.AD_MOB_ID_INTER_VIDEO = 'ca-app-pub-7668464781725150/1817033427';
             this.IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/3543909029';
         } else if (this.IGV.isIOS) {
             this.IGV.AD_MOB_ID_BANNER = 'ca-app-pub-7668464781725150/2577683427';
             this.IGV.AD_MOB_ID_INTER = 'ca-app-pub-7668464781725150/4054416623';
+            this.IGV.AD_MOB_ID_INTER_VIDEO = 'ca-app-pub-7668464781725150/3293766628';
             this.IGV.AD_MOB_ID_VIDEO = 'ca-app-pub-7668464781725150/2067175827';
         } else {
             this.IGV.AD_MOB_ID_BANNER = '';
             this.IGV.AD_MOB_ID_INTER = '';
+            this.IGV.AD_MOB_ID_INTER_VIDEO = '';
             this.IGV.AD_MOB_ID_VIDEO = '';
         }
     }
@@ -165,6 +168,26 @@ export class GF {
 
         adInterOptions = {
             adId: this.IGV.AD_MOB_ID_INTER,
+            isTesting: this.IGV.isTestingAdmob,
+            autoShow: true
+            //adExtras: this.adExtras
+        }
+
+        this.adMob.prepareInterstitial(adInterOptions)
+            .then(() => { this.adMob.showInterstitial(); this.IGV.admobCount = this.IGV.ADMOB_MAX_NUMBER });
+        return true;
+    }
+
+    public showInterstitialVideoImmd() {
+        if (!this.IGV.isAndroid
+            && !this.IGV.isIOS) {
+            return false;
+        }
+
+        let adInterOptions: AdMobOptions = <AdMobOptions>{};
+
+        adInterOptions = {
+            adId: this.IGV.AD_MOB_ID_INTER_VIDEO,
             isTesting: this.IGV.isTestingAdmob,
             autoShow: true
             //adExtras: this.adExtras

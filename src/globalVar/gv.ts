@@ -50,6 +50,7 @@ export interface IGV {
 
     AD_MOB_ID_BANNER: string;
     AD_MOB_ID_INTER: string;
+    AD_MOB_ID_INTER_VIDEO: string;
     AD_MOB_ID_VIDEO: string;
 }
 
@@ -60,8 +61,8 @@ export const IGV: IGV = {
     DEPLOY_CHANNEL: 'dev',
     // Change it to false when production
 
-    ADMOB_MAX_NUMBER: 15,
-    admobCount: 15,
+    ADMOB_MAX_NUMBER: 8,
+    admobCount: 8,
 
     gLangInd: '',
     gAppItemInd: '',
@@ -113,6 +114,7 @@ export const IGV: IGV = {
 
     AD_MOB_ID_BANNER: '',
     AD_MOB_ID_INTER: '',
+    AD_MOB_ID_INTER_VIDEO: '',
     AD_MOB_ID_VIDEO: ''
 };
 

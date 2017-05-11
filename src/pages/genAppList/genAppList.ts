@@ -124,7 +124,7 @@ export class GenAppList {
       title = this.IGV.CLEAR_ALL_MY_FAVOURITE_ZH;
       no = this.IGV.NO_ZH;
       yes = this.IGV.YES_ZH;
-    } if (this.IGV.gLangInd === 'cn') {
+    } else if (this.IGV.gLangInd === 'cn') {
       title = this.IGV.CLEAR_ALL_MY_FAVOURITE_CN;
       no = this.IGV.NO_CN;
       yes = this.IGV.YES_CN;
